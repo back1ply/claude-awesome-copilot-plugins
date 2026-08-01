@@ -1227,6 +1227,342 @@
         "screen-recording",
         "visual"
       ]
+    },
+    {
+      "name": "extras-gem-team",
+      "source": "./claude-plugins/extras-gem-team",
+      "description": "The gem-team multi-agent suite: planning, implementation, review, testing and design agents. Community skills and agents from github/awesome-copilot that no upstream plugin bundles.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "gem-team",
+        "awesome-copilot",
+        "extras"
+      ]
+    },
+    {
+      "name": "extras-power-platform",
+      "source": "./claude-plugins/extras-power-platform",
+      "description": "Power BI, Power Apps, Power Platform and Dataverse. Community skills and agents from github/awesome-copilot that no upstream plugin bundles.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "power-platform",
+        "awesome-copilot",
+        "extras"
+      ]
+    },
+    {
+      "name": "extras-azure",
+      "source": "./claude-plugins/extras-azure",
+      "description": "Azure architecture, IaC, diagnostics and platform services. Community skills and agents from github/awesome-copilot that no upstream plugin bundles.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "azure",
+        "awesome-copilot",
+        "extras"
+      ]
+    },
+    {
+      "name": "extras-aws",
+      "source": "./claude-plugins/extras-aws",
+      "description": "AWS architecture, cost and diagnostics. Community skills and agents from github/awesome-copilot that no upstream plugin bundles.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "aws",
+        "awesome-copilot",
+        "extras"
+      ]
+    },
+    {
+      "name": "extras-dotnet",
+      "source": "./claude-plugins/extras-dotnet",
+      "description": ".NET, C# and Windows desktop development. Community skills and agents from github/awesome-copilot that no upstream plugin bundles.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "dotnet",
+        "awesome-copilot",
+        "extras"
+      ]
+    },
+    {
+      "name": "extras-java-jvm",
+      "source": "./claude-plugins/extras-java-jvm",
+      "description": "Java, Kotlin and Spring development. Community skills and agents from github/awesome-copilot that no upstream plugin bundles.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "java-jvm",
+        "awesome-copilot",
+        "extras"
+      ]
+    },
+    {
+      "name": "extras-python",
+      "source": "./claude-plugins/extras-python",
+      "description": "Python development, packaging and tooling. Community skills and agents from github/awesome-copilot that no upstream plugin bundles.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "python",
+        "awesome-copilot",
+        "extras"
+      ]
+    },
+    {
+      "name": "extras-web-frontend",
+      "source": "./claude-plugins/extras-web-frontend",
+      "description": "Frontend frameworks, UI design, accessibility and CMS platforms. Community skills and agents from github/awesome-copilot that no upstream plugin bundles.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "web-frontend",
+        "awesome-copilot",
+        "extras"
+      ]
+    },
+    {
+      "name": "extras-data-sql",
+      "source": "./claude-plugins/extras-data-sql",
+      "description": "SQL, NoSQL, vector databases and data modelling. Community skills and agents from github/awesome-copilot that no upstream plugin bundles.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "data-sql",
+        "awesome-copilot",
+        "extras"
+      ]
+    },
+    {
+      "name": "extras-security",
+      "source": "./claude-plugins/extras-security",
+      "description": "Security review, threat modelling, compliance and supply-chain checks. Community skills and agents from github/awesome-copilot that no upstream plugin bundles.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "security",
+        "awesome-copilot",
+        "extras"
+      ]
+    },
+    {
+      "name": "extras-devops-ci",
+      "source": "./claude-plugins/extras-devops-ci",
+      "description": "CI/CD, infrastructure, observability and incident response. Community skills and agents from github/awesome-copilot that no upstream plugin bundles.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "devops-ci",
+        "awesome-copilot",
+        "extras"
+      ]
+    },
+    {
+      "name": "extras-linux-systems",
+      "source": "./claude-plugins/extras-linux-systems",
+      "description": "Linux administration, shell tooling and local developer utilities. Community skills and agents from github/awesome-copilot that no upstream plugin bundles.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "linux-systems",
+        "awesome-copilot",
+        "extras"
+      ]
+    },
+    {
+      "name": "extras-copilot-github",
+      "source": "./claude-plugins/extras-copilot-github",
+      "description": "GitHub and Copilot platform workflows. Community skills and agents from github/awesome-copilot that no upstream plugin bundles.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "copilot-github",
+        "awesome-copilot",
+        "extras"
+      ]
+    },
+    {
+      "name": "extras-codebase-analysis",
+      "source": "./claude-plugins/extras-codebase-analysis",
+      "description": "Understanding an unfamiliar codebase: blueprints, tours and context maps. Community skills and agents from github/awesome-copilot that no upstream plugin bundles.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "codebase-analysis",
+        "awesome-copilot",
+        "extras"
+      ]
+    },
+    {
+      "name": "extras-learning-teaching",
+      "source": "./claude-plugins/extras-learning-teaching",
+      "description": "Learning, mentoring, interview prep and career workflows. Community skills and agents from github/awesome-copilot that no upstream plugin bundles.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "learning-teaching",
+        "awesome-copilot",
+        "extras"
+      ]
+    },
+    {
+      "name": "extras-content-media",
+      "source": "./claude-plugins/extras-content-media",
+      "description": "Document conversion, image generation and writing-style tools. Community skills and agents from github/awesome-copilot that no upstream plugin bundles.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "content-media",
+        "awesome-copilot",
+        "extras"
+      ]
+    },
+    {
+      "name": "extras-research-analysis",
+      "source": "./claude-plugins/extras-research-analysis",
+      "description": "Research, competitive analysis and reporting. Community skills and agents from github/awesome-copilot that no upstream plugin bundles.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "research-analysis",
+        "awesome-copilot",
+        "extras"
+      ]
+    },
+    {
+      "name": "extras-ai-agents",
+      "source": "./claude-plugins/extras-ai-agents",
+      "description": "Building agents: MCP servers, prompt engineering, evals and observability. Community skills and agents from github/awesome-copilot that no upstream plugin bundles.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "ai-agents",
+        "awesome-copilot",
+        "extras"
+      ]
+    },
+    {
+      "name": "extras-docs-writing",
+      "source": "./claude-plugins/extras-docs-writing",
+      "description": "Documentation, specifications and diagrams. Community skills and agents from github/awesome-copilot that no upstream plugin bundles.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "docs-writing",
+        "awesome-copilot",
+        "extras"
+      ]
+    },
+    {
+      "name": "extras-project-planning",
+      "source": "./claude-plugins/extras-project-planning",
+      "description": "Requirements, planning, breakdowns and retrospectives. Community skills and agents from github/awesome-copilot that no upstream plugin bundles.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "project-planning",
+        "awesome-copilot",
+        "extras"
+      ]
+    },
+    {
+      "name": "extras-testing",
+      "source": "./claude-plugins/extras-testing",
+      "description": "Test authoring, migration and coverage. Community skills and agents from github/awesome-copilot that no upstream plugin bundles.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "testing",
+        "awesome-copilot",
+        "extras"
+      ]
+    },
+    {
+      "name": "extras-gtm-business",
+      "source": "./claude-plugins/extras-gtm-business",
+      "description": "Go-to-market, positioning, pricing and launch playbooks. Community skills and agents from github/awesome-copilot that no upstream plugin bundles.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "gtm-business",
+        "awesome-copilot",
+        "extras"
+      ]
+    },
+    {
+      "name": "extras-git-workflow",
+      "source": "./claude-plugins/extras-git-workflow",
+      "description": "Commits, branches, code review and refactoring workflows. Community skills and agents from github/awesome-copilot that no upstream plugin bundles.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "git-workflow",
+        "awesome-copilot",
+        "extras"
+      ]
+    },
+    {
+      "name": "extras-coding-agents",
+      "source": "./claude-plugins/extras-coding-agents",
+      "description": "General-purpose engineering agents, reviewer personas and assorted skills. Community skills and agents from github/awesome-copilot that no upstream plugin bundles.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "coding-agents",
+        "awesome-copilot",
+        "extras"
+      ]
     }
   ]
 }

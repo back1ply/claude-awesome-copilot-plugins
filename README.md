@@ -15,7 +15,7 @@ Upstream's `plugins/`, `skills/`, `agents/` and everything else are untouched �
 
 ## Plugins
 
-69 plugins — 162 skills, 112 agents.
+93 plugins — 406 skills, 231 agents.
 
 | Plugin | Contents | Description |
 | --- | --- | --- |
@@ -88,6 +88,30 @@ Upstream's `plugins/`, `skills/`, `agents/` and everything else are untouched �
 | [`typespec-m365-copilot`](claude-plugins/typespec-m365-copilot/) | 3 skills | Comprehensive collection of prompts, instructions, and resources for building declarative agents and API plugins using TypeSpec for Microsoft 365 Copilot extensibility. |
 | [`uizze`](claude-plugins/uizze/) | 1 skill | Stop generic UI from shipping. Ground GitHub Copilot in 800,000+ real web and iOS screens, write a product-specific design contract, and enforce a hard finish gate. |
 | [`visual-pr`](claude-plugins/visual-pr/) | 4 skills | Capture, annotate, and embed screenshots and animated GIF demos in pull request descriptions. Includes Playwright-based UI capture, PIL image annotations, PR embedding workflows for GitHub and Azure DevOps, and screen recording with variable timing. |
+| [`extras-gem-team`](claude-plugins/extras-gem-team/) | 16 agents | The gem-team multi-agent suite: planning, implementation, review, testing and design agents. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
+| [`extras-power-platform`](claude-plugins/extras-power-platform/) | 2 skills | Power BI, Power Apps, Power Platform and Dataverse. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
+| [`extras-azure`](claude-plugins/extras-azure/) | 17 skills, 9 agents | Azure architecture, IaC, diagnostics and platform services. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
+| [`extras-aws`](claude-plugins/extras-aws/) | 2 skills, 2 agents | AWS architecture, cost and diagnostics. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
+| [`extras-dotnet`](claude-plugins/extras-dotnet/) | 16 skills, 7 agents | .NET, C# and Windows desktop development. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
+| [`extras-java-jvm`](claude-plugins/extras-java-jvm/) | 9 skills | Java, Kotlin and Spring development. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
+| [`extras-python`](claude-plugins/extras-python/) | 6 skills, 2 agents | Python development, packaging and tooling. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
+| [`extras-web-frontend`](claude-plugins/extras-web-frontend/) | 11 skills, 13 agents | Frontend frameworks, UI design, accessibility and CMS platforms. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
+| [`extras-data-sql`](claude-plugins/extras-data-sql/) | 15 skills, 1 agent | SQL, NoSQL, vector databases and data modelling. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
+| [`extras-security`](claude-plugins/extras-security/) | 14 skills, 2 agents | Security review, threat modelling, compliance and supply-chain checks. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
+| [`extras-devops-ci`](claude-plugins/extras-devops-ci/) | 12 skills, 6 agents | CI/CD, infrastructure, observability and incident response. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
+| [`extras-linux-systems`](claude-plugins/extras-linux-systems/) | 13 skills, 4 agents | Linux administration, shell tooling and local developer utilities. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
+| [`extras-copilot-github`](claude-plugins/extras-copilot-github/) | 13 skills | GitHub and Copilot platform workflows. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
+| [`extras-codebase-analysis`](claude-plugins/extras-codebase-analysis/) | 13 skills, 1 agent | Understanding an unfamiliar codebase: blueprints, tours and context maps. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
+| [`extras-learning-teaching`](claude-plugins/extras-learning-teaching/) | 8 skills, 3 agents | Learning, mentoring, interview prep and career workflows. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
+| [`extras-content-media`](claude-plugins/extras-content-media/) | 12 skills, 2 agents | Document conversion, image generation and writing-style tools. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
+| [`extras-research-analysis`](claude-plugins/extras-research-analysis/) | 4 skills, 1 agent | Research, competitive analysis and reporting. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
+| [`extras-ai-agents`](claude-plugins/extras-ai-agents/) | 19 skills, 7 agents | Building agents: MCP servers, prompt engineering, evals and observability. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
+| [`extras-docs-writing`](claude-plugins/extras-docs-writing/) | 17 skills, 6 agents | Documentation, specifications and diagrams. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
+| [`extras-project-planning`](claude-plugins/extras-project-planning/) | 7 skills, 3 agents | Requirements, planning, breakdowns and retrospectives. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
+| [`extras-testing`](claude-plugins/extras-testing/) | 5 skills, 1 agent | Test authoring, migration and coverage. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
+| [`extras-gtm-business`](claude-plugins/extras-gtm-business/) | 11 skills | Go-to-market, positioning, pricing and launch playbooks. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
+| [`extras-git-workflow`](claude-plugins/extras-git-workflow/) | 9 skills, 3 agents | Commits, branches, code review and refactoring workflows. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
+| [`extras-coding-agents`](claude-plugins/extras-coding-agents/) | 9 skills, 30 agents | General-purpose engineering agents, reviewer personas and assorted skills. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
 
 ## What gets ported
 
@@ -108,7 +132,7 @@ Upstream's `plugins/`, `skills/`, `agents/` and everything else are untouched �
 
 - **`instructions/`** — 190 `*.instructions.md` files scoped by `applyTo:` globs. Claude Code has no glob-scoped context primitive; converting them to skills or `CLAUDE.md` is a lossy judgment call, deferred.
 - **`hooks/`, `workflows/`** — Copilot's event model and GitHub Actions agentic workflows, different runtime.
-- **Unbundled skills** — upstream ships 395 skills and 223 agents, but only 151 skills belong to a curated plugin. Only the bundled ones are here.
+- **Unbundled skills** — upstream ships 395 skills and 223 agents, but only 395 skills belong to a curated plugin. Only the bundled ones are here.
 
 ## Staying in sync with upstream
 

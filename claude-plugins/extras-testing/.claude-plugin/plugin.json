@@ -1,0 +1,15 @@
+{
+  "name": "extras-testing",
+  "description": "Test authoring, migration and coverage. Community skills and agents from github/awesome-copilot that no upstream plugin bundles.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Awesome Copilot Community"
+  },
+  "repository": "https://github.com/back1ply/claude-awesome-copilot-plugins",
+  "license": "MIT",
+  "keywords": [
+    "testing",
+    "awesome-copilot",
+    "extras"
+  ]
+}

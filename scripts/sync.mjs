@@ -19,6 +19,7 @@ const UPSTREAM = ROOT; // this repo is a fork — upstream's tree is already her
 const OUT_DIR = "claude-plugins"; // upstream already owns ./plugins
 const OUT_PLUGINS = path.join(ROOT, OUT_DIR);
 const MARKETPLACE = path.join(ROOT, ".claude-plugin", "marketplace.json");
+const GROUPS = path.join(ROOT, "scripts", "groups.json");
 
 const MARKETPLACE_OWNER = { name: "Shehab", url: "https://github.com/back1ply" };
 const REPO_URL = "https://github.com/back1ply/claude-awesome-copilot-plugins";
@@ -90,6 +91,11 @@ function rewriteAgent(text, slug) {
   }
   // Upstream `name:` is often a human title ("Debug Mode Instructions"), not a
   // slug. Claude wants the slug; the title moves into the body as an H1.
+  // Claude Code selects subagents by description, so an agent without one is
+  // unusable — fall back to its title (one upstream agent ships without it).
+  if (!kept.some((l) => l.startsWith("description:"))) {
+    kept.push(`description: ${title ?? slug.replace(/-/g, " ")}`);
+  }
   const fm = ["---", `name: ${slug}`, ...kept, "---"].join("\n");
   let out = body.replace(/^\s+/, "");
   if (title && title !== slug && !out.startsWith("#")) out = `# ${title}\n\n${out}`;
@@ -113,6 +119,144 @@ function rewriteSkill(text, slug) {
   });
   if (!seenName) out.unshift(`name: ${slug}`);
   return `---\n${out.join("\n")}\n---\n\n${body.replace(/^\s+/, "")}`;
+}
+
+// Upstream ships far more skills and agents than its curated plugins reference.
+// The strays get grouped into `extras-*` plugins by name. Assignments live in
+// scripts/groups.json so they can be corrected by hand; these rules only decide
+// where an item lands the first time it appears upstream.
+const BUCKETS = [
+  ["gem-team", /^gem-/, "The gem-team multi-agent suite: planning, implementation, review, testing and design agents"],
+  ["power-platform", /power-?(bi|apps|platform|pages)|dataverse|pcf-|\bdax\b|flowstudio|fabric-|canvas-app/, "Power BI, Power Apps, Power Platform and Dataverse"],
+  ["azure", /^azure|azure|bicep|entra|avm|appinsights|kusto|defender|arm-migration|aspire|winui3-migration/, "Azure architecture, IaC, diagnostics and platform services"],
+  ["aws", /^aws-|cloudwatch|^terraform-aws/, "AWS architecture, cost and diagnostics"],
+  ["dotnet", /dotnet|csharp|blazor|maui|winui|wpf|nuget|mvvm|efcore|ef-core|fluentui|vsix|winmd|delphi|semantic-kernel|msstore|vscode-ext/, ".NET, C# and Windows desktop development"],
+  ["java-jvm", /^java|spring|kotlin|graalvm|quarkus|helidon|javax/, "Java, Kotlin and Spring development"],
+  ["python", /python|pytest|ruff|pypi|freecad|rhino3d|shuffle-json/, "Python development, packaging and tooling"],
+  ["web-frontend", /^react|vue|angular|svelte|nextjs|next-intl|tailwind|frontend|gsap|penpot|premium-|anti-ui|web-design|a11y|accessib|shopify|drupal|aem-|pimcore|wordpress|moodle|nuxt|ember|electron|laravel|uizze|slang-shader|game-engine|minecraft/, "Frontend frameworks, UI design, accessibility and CMS platforms"],
+  ["data-sql", /sql|postgres|mongo|snowflake|bigquery|cosmos|neo4j|neon|qdrant|pinecone|spark|ssma|credit-risk|powerbi-modeling|oracle/, "SQL, NoSQL, vector databases and data modelling"],
+  ["security", /security|owasp|threat|secret|vulnerab|gdpr|jfrog|stackhawk|sast|codeql|dependabot|attester|trojan|breach|supply-chain|audit-integrity|resemble-detect/, "Security review, threat modelling, compliance and supply-chain checks"],
+  ["devops-ci", /github-actions|terraform|kubernetes|docker|containeriz|deploy|incident|sre|oncall|pagerduty|dynatrace|elasticsearch|new-relic|octopus|launchdarkly|devops|gitops|codespaces|dependency|vcpkg|cmake|namecheap|publish-to-pages|sandbox-npm|import-infrastructure/, "CI/CD, infrastructure, observability and incident response"],
+  ["linux-systems", /linux|batch-files|\bshell\b|cli-mastery|tldr|lsp-setup|chrome-devtools|screen-recording|pdftk|image-manipulation|editorconfig/, "Linux administration, shell tooling and local developer utilities"],
+  ["copilot-github", /^copilot-|^github-|^gh-|issue-fields|make-repo-contribution|workiq|setup-my-iq|first-ask|noob-mode|quasi-coder/, "GitHub and Copilot platform workflows"],
+  ["codebase-analysis", /codebase|code-tour|memory|agentsmd|context-map|mini-context|what-context|bench-read|acquire-|folder-structure|technology-stack|project-workflow|repo-story|architecture-blueprint|code-exemplars|exemplars/, "Understanding an unfamiliar codebase: blueprints, tours and context maps"],
+  ["learning-teaching", /exam-ready|mentoring|workshop|tutorial|educational|study|interview-prep|desk-|daily-prep|brag|performance-review|technical-job|career/, "Learning, mentoring, interview prep and career workflows"],
+  ["content-media", /adobe|illustrator|image|screenshot|latchshot|markstream|md-to-|convert-|markdown-to|nano-banana|generate-image|linkedin|email|x-twitter|steno|humaniz|em-dash|finnish|from-the-other-side|legacy-circuit/, "Document conversion, image generation and writing-style tools"],
+  ["research-analysis", /autoresearch|competitor|scientific-paper|ad-campaign|last30|research|intelligence|eyeball|vardoger|geofeed|sponsor|ospo/, "Research, competitive analysis and reporting"],
+  ["ai-agents", /^agent-|^mcp-|prompt|^ai-|llm|arize|phoenix|opik|comet|declarative-agent|skill-|meta-agentic|context7|copilot-sdk|apify|transloadit|webmcp|foundry|entra-agent|harness-engineering|microsoft-agent|semantic|eval/, "Building agents: MCP servers, prompt engineering, evals and observability"],
+  ["docs-writing", /readme|documentation|docs$|^docs|markdown|llms|technical-writ|blueprint|spec|adr|architectur|diagram|plantuml|comment|create-tldr|tldr-prompt|oo-component|self-explanatory|update-markdown/, "Documentation, specifications and diagrams"],
+  ["project-planning", /^create-github|issue|\bprd\b|^plan|planner|breakdown|epic|backlog|impediment|postmortem|meeting|refine|task-|estimat|roundup|structured-autonomy|tiny-stepping|quality-playbook|devops-rollout|technical-spike|one-shot/, "Requirements, planning, breakdowns and retrospectives"],
+  ["testing", /test|tdd|coverage|playwright|junit|pester|^qa-|diffblue|scoutqa|terratest/, "Test authoring, migration and coverage"],
+  ["gtm-business", /^gtm-|marketing|campaign|pricing|apple-appstore/, "Go-to-market, positioning, pricing and launch playbooks"],
+  ["git-workflow", /^git-|commit|branch|gitmoji|^refactor|review|janitor|address-comments|modernization|upgrade|migrat|release|conventional/, "Commits, branches, code review and refactoring workflows"],
+  // Everything else: general-purpose engineering agents and personas.
+  ["coding-agents", /.*/, "General-purpose engineering agents, reviewer personas and assorted skills"],
+];
+
+/** item name -> bucket, honouring hand-edits in groups.json and recording new items. */
+function loadGroups(names) {
+  const stored = fs.existsSync(GROUPS) ? JSON.parse(fs.readFileSync(GROUPS, "utf8")) : {};
+  const assignments = { ...(stored.assignments ?? {}) };
+  const valid = new Set(BUCKETS.map(([n]) => n));
+  let added = 0;
+  for (const name of names) {
+    if (assignments[name] && valid.has(assignments[name])) continue;
+    assignments[name] = BUCKETS.find(([, re]) => re.test(name))[0];
+    added++;
+  }
+  // Drop assignments for items upstream has removed, keep the file sorted.
+  const live = new Set(names);
+  const sorted = Object.fromEntries(
+    Object.entries(assignments)
+      .filter(([n]) => live.has(n))
+      .sort(([a], [b]) => a.localeCompare(b)),
+  );
+  fs.writeFileSync(
+    GROUPS,
+    `${JSON.stringify(
+      {
+        $comment:
+          "Maps each skill/agent that no upstream plugin references to an extras-* plugin. Hand-edit any value to move an item; sync.mjs preserves your choice and only auto-assigns names it has not seen. Valid targets are the bucket names in scripts/sync.mjs.",
+        assignments: sorted,
+      },
+      null,
+      2,
+    )}\n`,
+  );
+  return { assignments: sorted, added };
+}
+
+/** Bundles every skill/agent no curated plugin references into extras-* plugins. */
+function generateExtras(entries, stats) {
+  const claimedSkills = new Set();
+  const claimedAgents = new Set();
+  for (const dir of fs.readdirSync(OUT_PLUGINS)) {
+    for (const d of ["skills", "agents"]) {
+      const p = path.join(OUT_PLUGINS, dir, d);
+      if (!fs.existsSync(p)) continue;
+      for (const n of fs.readdirSync(p)) (d === "skills" ? claimedSkills : claimedAgents).add(n.replace(/\.md$/, ""));
+    }
+  }
+
+  const strays = [];
+  for (const n of fs.readdirSync(path.join(UPSTREAM, "skills")))
+    if (!claimedSkills.has(n) && fs.existsSync(path.join(UPSTREAM, "skills", n, "SKILL.md"))) strays.push([n, "skill"]);
+  for (const f of fs.readdirSync(path.join(UPSTREAM, "agents"))) {
+    const n = f.replace(/\.agent\.md$/, "");
+    if (!claimedAgents.has(n)) strays.push([n, "agent"]);
+  }
+
+  const { assignments, added } = loadGroups(strays.map(([n]) => n));
+  stats.newlyGrouped = added;
+
+  for (const [bucket, , description] of BUCKETS) {
+    const members = strays.filter(([n]) => assignments[n] === bucket);
+    if (!members.length) continue;
+    const name = `extras-${bucket}`;
+    const dest = path.join(OUT_PLUGINS, name);
+    let skills = 0;
+    let agents = 0;
+
+    for (const [item, kind] of members) {
+      if (kind === "skill") {
+        const to = path.join(dest, "skills", item);
+        fs.cpSync(path.join(UPSTREAM, "skills", item), to, { recursive: true });
+        const f = path.join(to, "SKILL.md");
+        fs.writeFileSync(f, rewriteSkill(fs.readFileSync(f, "utf8"), item));
+        skills++;
+      } else {
+        fs.mkdirSync(path.join(dest, "agents"), { recursive: true });
+        const from = path.join(UPSTREAM, "agents", `${item}.agent.md`);
+        fs.writeFileSync(path.join(dest, "agents", `${item}.md`), rewriteAgent(fs.readFileSync(from, "utf8"), item));
+        agents++;
+      }
+    }
+
+    const manifest = {
+      name,
+      description: `${description}. Community skills and agents from github/awesome-copilot that no upstream plugin bundles.`,
+      version: "1.0.0",
+      author: { name: "Awesome Copilot Community" },
+      repository: REPO_URL,
+      license: "MIT",
+      keywords: [bucket, "awesome-copilot", "extras"],
+    };
+    fs.mkdirSync(path.join(dest, ".claude-plugin"), { recursive: true });
+    fs.writeFileSync(path.join(dest, ".claude-plugin", "plugin.json"), `${JSON.stringify(manifest, null, 2)}\n`);
+
+    entries.push({
+      name,
+      source: `./${OUT_DIR}/${name}`,
+      description: manifest.description,
+      version: manifest.version,
+      author: manifest.author,
+      keywords: manifest.keywords,
+    });
+    stats.plugins++;
+    stats.skills += skills;
+    stats.agents += agents;
+    stats.extras = (stats.extras ?? 0) + 1;
+  }
 }
 
 function generate() {
@@ -214,6 +358,8 @@ function generate() {
     stats.skills += skills;
     stats.agents += agents;
   }
+
+  generateExtras(entries, stats);
 
   const marketplace = {
     $schema: "https://anthropic.com/claude-code/marketplace.schema.json",

@@ -1,0 +1,15 @@
+{
+  "name": "extras-ai-agents",
+  "description": "Building agents: MCP servers, prompt engineering, evals and observability. Community skills and agents from github/awesome-copilot that no upstream plugin bundles.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Awesome Copilot Community"
+  },
+  "repository": "https://github.com/back1ply/claude-awesome-copilot-plugins",
+  "license": "MIT",
+  "keywords": [
+    "ai-agents",
+    "awesome-copilot",
+    "extras"
+  ]
+}
