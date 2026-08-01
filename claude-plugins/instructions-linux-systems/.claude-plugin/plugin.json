@@ -1,0 +1,16 @@
+{
+  "name": "instructions-linux-systems",
+  "description": "Coding conventions and best-practice guidance for linux and PowerShell administration, shell tooling and local developer utilities. Ported from github/awesome-copilot custom instructions.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Awesome Copilot Community"
+  },
+  "repository": "https://github.com/back1ply/claude-awesome-copilot-plugins",
+  "license": "MIT",
+  "keywords": [
+    "linux-systems",
+    "awesome-copilot",
+    "instructions",
+    "conventions"
+  ]
+}

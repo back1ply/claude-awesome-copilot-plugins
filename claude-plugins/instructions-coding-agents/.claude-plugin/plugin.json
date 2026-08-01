@@ -1,0 +1,16 @@
+{
+  "name": "instructions-coding-agents",
+  "description": "Coding conventions and best-practice guidance for general-purpose engineering agents, reviewer personas and assorted skills. Ported from github/awesome-copilot custom instructions.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Awesome Copilot Community"
+  },
+  "repository": "https://github.com/back1ply/claude-awesome-copilot-plugins",
+  "license": "MIT",
+  "keywords": [
+    "coding-agents",
+    "awesome-copilot",
+    "instructions",
+    "conventions"
+  ]
+}

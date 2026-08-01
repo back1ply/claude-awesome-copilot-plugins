@@ -1,6 +1,6 @@
 {
   "name": "extras-linux-systems",
-  "description": "Linux administration, shell tooling and local developer utilities. Community skills and agents from github/awesome-copilot that no upstream plugin bundles.",
+  "description": "Linux and PowerShell administration, shell tooling and local developer utilities. Community skills and agents from github/awesome-copilot that no upstream plugin bundles.",
   "version": "1.0.0",
   "author": {
     "name": "Awesome Copilot Community"

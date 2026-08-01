@@ -1,0 +1,16 @@
+{
+  "name": "instructions-azure",
+  "description": "Coding conventions and best-practice guidance for azure architecture, IaC, diagnostics and platform services. Ported from github/awesome-copilot custom instructions.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Awesome Copilot Community"
+  },
+  "repository": "https://github.com/back1ply/claude-awesome-copilot-plugins",
+  "license": "MIT",
+  "keywords": [
+    "azure",
+    "awesome-copilot",
+    "instructions",
+    "conventions"
+  ]
+}

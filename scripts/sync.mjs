@@ -127,17 +127,20 @@ function rewriteSkill(text, slug) {
 // where an item lands the first time it appears upstream.
 const BUCKETS = [
   ["gem-team", /^gem-/, "The gem-team multi-agent suite: planning, implementation, review, testing and design agents"],
-  ["power-platform", /power-?(bi|apps|platform|pages)|dataverse|pcf-|\bdax\b|flowstudio|fabric-|canvas-app/, "Power BI, Power Apps, Power Platform and Dataverse"],
+  ["pcf", /^pcf-|pcf-development|power-apps-component/, "Power Apps Component Framework (PCF) code components"],
+  ["salesforce", /salesforce|^apex|^lwc|visualforce/, "Salesforce: Apex, Lightning Web Components and Flow"],
+  ["power-platform", /power-?(bi|apps|platform|pages)|dataverse|\bdax\b|flowstudio|fabric-|canvas-app/, "Power BI, Power Apps, Power Platform and Dataverse"],
   ["azure", /^azure|azure|bicep|entra|avm|appinsights|kusto|defender|arm-migration|aspire|winui3-migration/, "Azure architecture, IaC, diagnostics and platform services"],
   ["aws", /^aws-|cloudwatch|^terraform-aws/, "AWS architecture, cost and diagnostics"],
   ["dotnet", /dotnet|csharp|blazor|maui|winui|wpf|nuget|mvvm|efcore|ef-core|fluentui|vsix|winmd|delphi|semantic-kernel|msstore|vscode-ext/, ".NET, C# and Windows desktop development"],
   ["java-jvm", /^java|spring|kotlin|graalvm|quarkus|helidon|javax/, "Java, Kotlin and Spring development"],
   ["python", /python|pytest|ruff|pypi|freecad|rhino3d|shuffle-json/, "Python development, packaging and tooling"],
-  ["web-frontend", /^react|vue|angular|svelte|nextjs|next-intl|tailwind|frontend|gsap|penpot|premium-|anti-ui|web-design|a11y|accessib|shopify|drupal|aem-|pimcore|wordpress|moodle|nuxt|ember|electron|laravel|uizze|slang-shader|game-engine|minecraft/, "Frontend frameworks, UI design, accessibility and CMS platforms"],
+  ["web-frontend", /^react|vue|angular|svelte|nextjs|next-intl|tailwind|tanstack|astro|nestjs|oqtane|html-css|frontend|gsap|penpot|premium-|anti-ui|web-design|a11y|accessib|shopify|drupal|aem-|pimcore|wordpress|moodle|nuxt|ember|electron|laravel|uizze|slang-shader|game-engine|minecraft/, "Frontend frameworks, UI design, accessibility and CMS platforms"],
   ["data-sql", /sql|postgres|mongo|snowflake|bigquery|cosmos|neo4j|neon|qdrant|pinecone|spark|ssma|credit-risk|powerbi-modeling|oracle/, "SQL, NoSQL, vector databases and data modelling"],
   ["security", /security|owasp|threat|secret|vulnerab|gdpr|jfrog|stackhawk|sast|codeql|dependabot|attester|trojan|breach|supply-chain|audit-integrity|resemble-detect/, "Security review, threat modelling, compliance and supply-chain checks"],
   ["devops-ci", /github-actions|terraform|kubernetes|docker|containeriz|deploy|incident|sre|oncall|pagerduty|dynatrace|elasticsearch|new-relic|octopus|launchdarkly|devops|gitops|codespaces|dependency|vcpkg|cmake|namecheap|publish-to-pages|sandbox-npm|import-infrastructure/, "CI/CD, infrastructure, observability and incident response"],
-  ["linux-systems", /linux|batch-files|\bshell\b|cli-mastery|tldr|lsp-setup|chrome-devtools|screen-recording|pdftk|image-manipulation|editorconfig/, "Linux administration, shell tooling and local developer utilities"],
+  ["other-languages", /^go$|^go-|^rust|^ruby|^php|^scala|^clojure|^dart|^swift|^r-instructions|^r$|coldfusion|makefile|cpp|c-language|perl|genaiscript|joyride/, "Go, Rust, Ruby, PHP, Scala, Clojure, Dart, Swift and C++"],
+  ["linux-systems", /linux|batch-files|\bshell\b|powershell|ansible|cli-mastery|tldr|lsp-setup|chrome-devtools|screen-recording|pdftk|image-manipulation|editorconfig/, "Linux and PowerShell administration, shell tooling and local developer utilities"],
   ["copilot-github", /^copilot-|^github-|^gh-|issue-fields|make-repo-contribution|workiq|setup-my-iq|first-ask|noob-mode|quasi-coder/, "GitHub and Copilot platform workflows"],
   ["codebase-analysis", /codebase|code-tour|memory|agentsmd|context-map|mini-context|what-context|bench-read|acquire-|folder-structure|technology-stack|project-workflow|repo-story|architecture-blueprint|code-exemplars|exemplars/, "Understanding an unfamiliar codebase: blueprints, tours and context maps"],
   ["learning-teaching", /exam-ready|mentoring|workshop|tutorial|educational|study|interview-prep|desk-|daily-prep|brag|performance-review|technical-job|career/, "Learning, mentoring, interview prep and career workflows"],
@@ -153,10 +156,14 @@ const BUCKETS = [
   ["coding-agents", /.*/, "General-purpose engineering agents, reviewer personas and assorted skills"],
 ];
 
-/** item name -> bucket, honouring hand-edits in groups.json and recording new items. */
-function loadGroups(names) {
+/**
+ * item name -> bucket, honouring hand-edits in groups.json and recording new
+ * items. `section` keeps skills/agents and instructions in separate maps so
+ * each call rewrites only its own half of the file.
+ */
+function loadGroups(names, section = "assignments") {
   const stored = fs.existsSync(GROUPS) ? JSON.parse(fs.readFileSync(GROUPS, "utf8")) : {};
-  const assignments = { ...(stored.assignments ?? {}) };
+  const assignments = { ...(stored[section] ?? {}) };
   const valid = new Set(BUCKETS.map(([n]) => n));
   let added = 0;
   for (const name of names) {
@@ -175,15 +182,110 @@ function loadGroups(names) {
     GROUPS,
     `${JSON.stringify(
       {
+        ...stored,
         $comment:
-          "Maps each skill/agent that no upstream plugin references to an extras-* plugin. Hand-edit any value to move an item; sync.mjs preserves your choice and only auto-assigns names it has not seen. Valid targets are the bucket names in scripts/sync.mjs.",
-        assignments: sorted,
+          "Maps each ported item to a topic bucket: `assignments` covers skills/agents no upstream plugin references (extras-* plugins), `instructions` covers instructions/*.instructions.md (instructions-* plugins). Hand-edit any value to move an item; sync.mjs preserves your choice and only auto-assigns names it has not seen. Valid targets are the bucket names in scripts/sync.mjs.",
+        [section]: sorted,
       },
       null,
       2,
     )}\n`,
   );
   return { assignments: sorted, added };
+}
+
+/** Full value of a frontmatter key, continuation lines joined, quotes stripped. */
+function frontmatterValue(lines, key) {
+  const parts = [];
+  let capturing = false;
+  eachFrontmatterLine(lines, (k, line, value) => {
+    if (value !== null) {
+      capturing = k === key;
+      if (capturing) parts.push(value.trim());
+    } else if (capturing) {
+      parts.push(line.trim());
+    }
+  });
+  if (!parts.length) return null;
+  const joined = parts.join(" ").trim();
+  return joined.replace(/^['"]|['"]$/g, "").trim() || null;
+}
+
+/**
+ * Ports instructions/*.instructions.md into instructions-* plugins.
+ *
+ * Copilot injects these whenever a file matches their `applyTo` glob. Claude
+ * Code has no glob-scoped context, so each becomes a skill and the glob is
+ * folded into the description — the model reads it as the trigger. Non-
+ * deterministic where Copilot was deterministic, which is the honest ceiling
+ * of this conversion.
+ */
+function generateInstructions(entries, stats) {
+  const dir = path.join(UPSTREAM, "instructions");
+  if (!fs.existsSync(dir)) return;
+
+  const items = fs.readdirSync(dir).filter((f) => f.endsWith(".instructions.md"));
+  const names = items.map((f) => `${f.replace(/\.instructions\.md$/, "")}-instructions`);
+  const { assignments } = loadGroups(names, "instructions");
+
+  const byBucket = {};
+  for (const file of items) {
+    const slug = file.replace(/\.instructions\.md$/, "");
+    const name = `${slug}-instructions`;
+    (byBucket[assignments[name]] ??= []).push([name, slug, file]);
+  }
+
+  for (const [bucket, , description] of BUCKETS) {
+    const members = byBucket[bucket];
+    if (!members?.length) continue;
+    const pluginName = `instructions-${bucket}`;
+    const dest = path.join(OUT_PLUGINS, pluginName);
+
+    for (const [name, slug, file] of members) {
+      const text = fs.readFileSync(path.join(dir, file), "utf8");
+      const [fmLines, body] = splitFrontmatter(text);
+      const title = body.match(/^#\s+(.+)$/m)?.[1]?.trim();
+      let desc = (fmLines && frontmatterValue(fmLines, "description")) || title || slug.replace(/-/g, " ");
+
+      // The glob is the whole point of an instruction file — keep it as the
+      // trigger hint now that nothing enforces it automatically.
+      const applyTo = fmLines && frontmatterValue(fmLines, "applyTo");
+      if (applyTo && !/^(\[?['"]?\*+['"]?\]?)$/.test(applyTo.trim())) {
+        desc = `${desc.replace(/\.?\s*$/, ".")} Applies to: ${applyTo.replace(/^\[|\]$/g, "").replace(/['"]/g, "")}`;
+      }
+
+      const to = path.join(dest, "skills", name);
+      fs.mkdirSync(to, { recursive: true });
+      fs.writeFileSync(
+        path.join(to, "SKILL.md"),
+        `---\nname: ${name}\ndescription: ${JSON.stringify(desc)}\n---\n\n${body.replace(/^\s+/, "")}`,
+      );
+    }
+
+    const manifest = {
+      name: pluginName,
+      description: `Coding conventions and best-practice guidance for ${description.replace(/^[A-Z]/, (c) => c.toLowerCase())}. Ported from github/awesome-copilot custom instructions.`,
+      version: "1.0.0",
+      author: { name: "Awesome Copilot Community" },
+      repository: REPO_URL,
+      license: "MIT",
+      keywords: [bucket, "awesome-copilot", "instructions", "conventions"],
+    };
+    fs.mkdirSync(path.join(dest, ".claude-plugin"), { recursive: true });
+    fs.writeFileSync(path.join(dest, ".claude-plugin", "plugin.json"), `${JSON.stringify(manifest, null, 2)}\n`);
+
+    entries.push({
+      name: pluginName,
+      source: `./${OUT_DIR}/${pluginName}`,
+      description: manifest.description,
+      version: manifest.version,
+      author: manifest.author,
+      keywords: manifest.keywords,
+    });
+    stats.plugins++;
+    stats.skills += members.length;
+    stats.instructions = (stats.instructions ?? 0) + members.length;
+  }
 }
 
 /** Bundles every skill/agent no curated plugin references into extras-* plugins. */
@@ -360,6 +462,7 @@ function generate() {
   }
 
   generateExtras(entries, stats);
+  generateInstructions(entries, stats);
 
   const marketplace = {
     $schema: "https://anthropic.com/claude-code/marketplace.schema.json",

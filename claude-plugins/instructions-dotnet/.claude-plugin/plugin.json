@@ -1,0 +1,16 @@
+{
+  "name": "instructions-dotnet",
+  "description": "Coding conventions and best-practice guidance for .NET, C# and Windows desktop development. Ported from github/awesome-copilot custom instructions.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Awesome Copilot Community"
+  },
+  "repository": "https://github.com/back1ply/claude-awesome-copilot-plugins",
+  "license": "MIT",
+  "keywords": [
+    "dotnet",
+    "awesome-copilot",
+    "instructions",
+    "conventions"
+  ]
+}

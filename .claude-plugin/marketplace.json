@@ -1243,6 +1243,20 @@
       ]
     },
     {
+      "name": "extras-salesforce",
+      "source": "./claude-plugins/extras-salesforce",
+      "description": "Salesforce: Apex, Lightning Web Components and Flow. Community skills and agents from github/awesome-copilot that no upstream plugin bundles.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "salesforce",
+        "awesome-copilot",
+        "extras"
+      ]
+    },
+    {
       "name": "extras-power-platform",
       "source": "./claude-plugins/extras-power-platform",
       "description": "Power BI, Power Apps, Power Platform and Dataverse. Community skills and agents from github/awesome-copilot that no upstream plugin bundles.",
@@ -1383,9 +1397,23 @@
       ]
     },
     {
+      "name": "extras-other-languages",
+      "source": "./claude-plugins/extras-other-languages",
+      "description": "Go, Rust, Ruby, PHP, Scala, Clojure, Dart, Swift and C++. Community skills and agents from github/awesome-copilot that no upstream plugin bundles.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "other-languages",
+        "awesome-copilot",
+        "extras"
+      ]
+    },
+    {
       "name": "extras-linux-systems",
       "source": "./claude-plugins/extras-linux-systems",
-      "description": "Linux administration, shell tooling and local developer utilities. Community skills and agents from github/awesome-copilot that no upstream plugin bundles.",
+      "description": "Linux and PowerShell administration, shell tooling and local developer utilities. Community skills and agents from github/awesome-copilot that no upstream plugin bundles.",
       "version": "1.0.0",
       "author": {
         "name": "Awesome Copilot Community"
@@ -1562,6 +1590,351 @@
         "coding-agents",
         "awesome-copilot",
         "extras"
+      ]
+    },
+    {
+      "name": "instructions-pcf",
+      "source": "./claude-plugins/instructions-pcf",
+      "description": "Coding conventions and best-practice guidance for power Apps Component Framework (PCF) code components. Ported from github/awesome-copilot custom instructions.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "pcf",
+        "awesome-copilot",
+        "instructions",
+        "conventions"
+      ]
+    },
+    {
+      "name": "instructions-salesforce",
+      "source": "./claude-plugins/instructions-salesforce",
+      "description": "Coding conventions and best-practice guidance for salesforce: Apex, Lightning Web Components and Flow. Ported from github/awesome-copilot custom instructions.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "salesforce",
+        "awesome-copilot",
+        "instructions",
+        "conventions"
+      ]
+    },
+    {
+      "name": "instructions-power-platform",
+      "source": "./claude-plugins/instructions-power-platform",
+      "description": "Coding conventions and best-practice guidance for power BI, Power Apps, Power Platform and Dataverse. Ported from github/awesome-copilot custom instructions.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "power-platform",
+        "awesome-copilot",
+        "instructions",
+        "conventions"
+      ]
+    },
+    {
+      "name": "instructions-azure",
+      "source": "./claude-plugins/instructions-azure",
+      "description": "Coding conventions and best-practice guidance for azure architecture, IaC, diagnostics and platform services. Ported from github/awesome-copilot custom instructions.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "azure",
+        "awesome-copilot",
+        "instructions",
+        "conventions"
+      ]
+    },
+    {
+      "name": "instructions-aws",
+      "source": "./claude-plugins/instructions-aws",
+      "description": "Coding conventions and best-practice guidance for aWS architecture, cost and diagnostics. Ported from github/awesome-copilot custom instructions.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "aws",
+        "awesome-copilot",
+        "instructions",
+        "conventions"
+      ]
+    },
+    {
+      "name": "instructions-dotnet",
+      "source": "./claude-plugins/instructions-dotnet",
+      "description": "Coding conventions and best-practice guidance for .NET, C# and Windows desktop development. Ported from github/awesome-copilot custom instructions.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "dotnet",
+        "awesome-copilot",
+        "instructions",
+        "conventions"
+      ]
+    },
+    {
+      "name": "instructions-java-jvm",
+      "source": "./claude-plugins/instructions-java-jvm",
+      "description": "Coding conventions and best-practice guidance for java, Kotlin and Spring development. Ported from github/awesome-copilot custom instructions.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "java-jvm",
+        "awesome-copilot",
+        "instructions",
+        "conventions"
+      ]
+    },
+    {
+      "name": "instructions-python",
+      "source": "./claude-plugins/instructions-python",
+      "description": "Coding conventions and best-practice guidance for python development, packaging and tooling. Ported from github/awesome-copilot custom instructions.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "python",
+        "awesome-copilot",
+        "instructions",
+        "conventions"
+      ]
+    },
+    {
+      "name": "instructions-web-frontend",
+      "source": "./claude-plugins/instructions-web-frontend",
+      "description": "Coding conventions and best-practice guidance for frontend frameworks, UI design, accessibility and CMS platforms. Ported from github/awesome-copilot custom instructions.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "web-frontend",
+        "awesome-copilot",
+        "instructions",
+        "conventions"
+      ]
+    },
+    {
+      "name": "instructions-data-sql",
+      "source": "./claude-plugins/instructions-data-sql",
+      "description": "Coding conventions and best-practice guidance for sQL, NoSQL, vector databases and data modelling. Ported from github/awesome-copilot custom instructions.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "data-sql",
+        "awesome-copilot",
+        "instructions",
+        "conventions"
+      ]
+    },
+    {
+      "name": "instructions-security",
+      "source": "./claude-plugins/instructions-security",
+      "description": "Coding conventions and best-practice guidance for security review, threat modelling, compliance and supply-chain checks. Ported from github/awesome-copilot custom instructions.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "security",
+        "awesome-copilot",
+        "instructions",
+        "conventions"
+      ]
+    },
+    {
+      "name": "instructions-devops-ci",
+      "source": "./claude-plugins/instructions-devops-ci",
+      "description": "Coding conventions and best-practice guidance for cI/CD, infrastructure, observability and incident response. Ported from github/awesome-copilot custom instructions.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "devops-ci",
+        "awesome-copilot",
+        "instructions",
+        "conventions"
+      ]
+    },
+    {
+      "name": "instructions-other-languages",
+      "source": "./claude-plugins/instructions-other-languages",
+      "description": "Coding conventions and best-practice guidance for go, Rust, Ruby, PHP, Scala, Clojure, Dart, Swift and C++. Ported from github/awesome-copilot custom instructions.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "other-languages",
+        "awesome-copilot",
+        "instructions",
+        "conventions"
+      ]
+    },
+    {
+      "name": "instructions-linux-systems",
+      "source": "./claude-plugins/instructions-linux-systems",
+      "description": "Coding conventions and best-practice guidance for linux and PowerShell administration, shell tooling and local developer utilities. Ported from github/awesome-copilot custom instructions.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "linux-systems",
+        "awesome-copilot",
+        "instructions",
+        "conventions"
+      ]
+    },
+    {
+      "name": "instructions-copilot-github",
+      "source": "./claude-plugins/instructions-copilot-github",
+      "description": "Coding conventions and best-practice guidance for gitHub and Copilot platform workflows. Ported from github/awesome-copilot custom instructions.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "copilot-github",
+        "awesome-copilot",
+        "instructions",
+        "conventions"
+      ]
+    },
+    {
+      "name": "instructions-codebase-analysis",
+      "source": "./claude-plugins/instructions-codebase-analysis",
+      "description": "Coding conventions and best-practice guidance for understanding an unfamiliar codebase: blueprints, tours and context maps. Ported from github/awesome-copilot custom instructions.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "codebase-analysis",
+        "awesome-copilot",
+        "instructions",
+        "conventions"
+      ]
+    },
+    {
+      "name": "instructions-content-media",
+      "source": "./claude-plugins/instructions-content-media",
+      "description": "Coding conventions and best-practice guidance for document conversion, image generation and writing-style tools. Ported from github/awesome-copilot custom instructions.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "content-media",
+        "awesome-copilot",
+        "instructions",
+        "conventions"
+      ]
+    },
+    {
+      "name": "instructions-ai-agents",
+      "source": "./claude-plugins/instructions-ai-agents",
+      "description": "Coding conventions and best-practice guidance for building agents: MCP servers, prompt engineering, evals and observability. Ported from github/awesome-copilot custom instructions.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "ai-agents",
+        "awesome-copilot",
+        "instructions",
+        "conventions"
+      ]
+    },
+    {
+      "name": "instructions-docs-writing",
+      "source": "./claude-plugins/instructions-docs-writing",
+      "description": "Coding conventions and best-practice guidance for documentation, specifications and diagrams. Ported from github/awesome-copilot custom instructions.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "docs-writing",
+        "awesome-copilot",
+        "instructions",
+        "conventions"
+      ]
+    },
+    {
+      "name": "instructions-project-planning",
+      "source": "./claude-plugins/instructions-project-planning",
+      "description": "Coding conventions and best-practice guidance for requirements, planning, breakdowns and retrospectives. Ported from github/awesome-copilot custom instructions.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "project-planning",
+        "awesome-copilot",
+        "instructions",
+        "conventions"
+      ]
+    },
+    {
+      "name": "instructions-testing",
+      "source": "./claude-plugins/instructions-testing",
+      "description": "Coding conventions and best-practice guidance for test authoring, migration and coverage. Ported from github/awesome-copilot custom instructions.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "testing",
+        "awesome-copilot",
+        "instructions",
+        "conventions"
+      ]
+    },
+    {
+      "name": "instructions-git-workflow",
+      "source": "./claude-plugins/instructions-git-workflow",
+      "description": "Coding conventions and best-practice guidance for commits, branches, code review and refactoring workflows. Ported from github/awesome-copilot custom instructions.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "git-workflow",
+        "awesome-copilot",
+        "instructions",
+        "conventions"
+      ]
+    },
+    {
+      "name": "instructions-coding-agents",
+      "source": "./claude-plugins/instructions-coding-agents",
+      "description": "Coding conventions and best-practice guidance for general-purpose engineering agents, reviewer personas and assorted skills. Ported from github/awesome-copilot custom instructions.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "coding-agents",
+        "awesome-copilot",
+        "instructions",
+        "conventions"
       ]
     }
   ]

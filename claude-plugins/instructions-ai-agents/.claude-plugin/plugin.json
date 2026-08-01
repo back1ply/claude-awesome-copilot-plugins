@@ -1,0 +1,16 @@
+{
+  "name": "instructions-ai-agents",
+  "description": "Coding conventions and best-practice guidance for building agents: MCP servers, prompt engineering, evals and observability. Ported from github/awesome-copilot custom instructions.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Awesome Copilot Community"
+  },
+  "repository": "https://github.com/back1ply/claude-awesome-copilot-plugins",
+  "license": "MIT",
+  "keywords": [
+    "ai-agents",
+    "awesome-copilot",
+    "instructions",
+    "conventions"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "instructions-data-sql",
+  "description": "Coding conventions and best-practice guidance for sQL, NoSQL, vector databases and data modelling. Ported from github/awesome-copilot custom instructions.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Awesome Copilot Community"
+  },
+  "repository": "https://github.com/back1ply/claude-awesome-copilot-plugins",
+  "license": "MIT",
+  "keywords": [
+    "data-sql",
+    "awesome-copilot",
+    "instructions",
+    "conventions"
+  ]
+}
