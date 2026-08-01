@@ -1,0 +1,1232 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "awesome-copilot",
+  "description": "Unofficial Claude Code port of github/awesome-copilot — community skills and agents bundled as installable plugins. Not affiliated with GitHub, Inc.",
+  "owner": {
+    "name": "Shehab",
+    "url": "https://github.com/back1ply"
+  },
+  "plugins": [
+    {
+      "name": "acreadiness-cockpit",
+      "source": "./claude-plugins/acreadiness-cockpit",
+      "description": "Drive Microsoft AgentRC from Copilot chat: assess AI readiness, generate Copilot instructions (flat or nested with applyTo globs for monorepos), and manage policies. Produces a self-contained static HTML dashboard at reports/index.html.",
+      "version": "1.0.0",
+      "author": {
+        "name": "mvanderbend-msoft"
+      },
+      "keywords": [
+        "agentrc",
+        "ai-readiness",
+        "copilot-instructions",
+        "readiness-report",
+        "monorepo",
+        "policy",
+        "dashboard"
+      ]
+    },
+    {
+      "name": "ai-team-orchestration",
+      "source": "./claude-plugins/ai-team-orchestration",
+      "description": "Run a lightweight, role-separated AI development team with flexible tools, developer-selected models, proportionate planning, and optional QA.",
+      "version": "2.0.0",
+      "author": {
+        "name": "Denis Evdokimov"
+      },
+      "keywords": [
+        "ai-team",
+        "multi-agent",
+        "sprint-planning",
+        "brainstorm",
+        "project-management",
+        "orchestration",
+        "developer-workflow"
+      ]
+    },
+    {
+      "name": "arch",
+      "source": "./claude-plugins/arch",
+      "description": "Architecture and modernization toolkit: produce a cited architecture document for a locally-cloned repo, and generate a phased modernization plan that auto-runs Documentation mode when needed.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "architecture",
+        "modernization",
+        "documentation",
+        "migration",
+        "onboarding"
+      ]
+    },
+    {
+      "name": "arize-ax",
+      "source": "./claude-plugins/arize-ax",
+      "description": "Arize AX platform skills for LLM observability, evaluation, and optimization. Includes trace export, instrumentation, datasets, experiments, evaluators, AI provider integrations, annotations, prompt optimization, and deep linking to the Arize UI.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Arize AI"
+      },
+      "keywords": [
+        "arize",
+        "llm",
+        "observability",
+        "tracing",
+        "evaluation",
+        "instrumentation",
+        "datasets",
+        "experiments",
+        "prompt-optimization"
+      ]
+    },
+    {
+      "name": "automate-this",
+      "source": "./claude-plugins/automate-this",
+      "description": "Record your screen doing a manual process, drop the video on your Desktop, and let Copilot CLI analyze it frame-by-frame to build working automation scripts. Supports narrated recordings with audio transcription.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "automation",
+        "screen-recording",
+        "workflow",
+        "video-analysis",
+        "process-automation",
+        "scripting",
+        "productivity",
+        "copilot-cli"
+      ]
+    },
+    {
+      "name": "awesome-copilot",
+      "source": "./claude-plugins/awesome-copilot",
+      "description": "Meta prompts that help you discover and generate curated GitHub Copilot agents, instructions, prompts, and skills.",
+      "version": "1.1.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "github-copilot",
+        "discovery",
+        "meta",
+        "prompt-engineering",
+        "agents"
+      ]
+    },
+    {
+      "name": "aws-cloud-development",
+      "source": "./claude-plugins/aws-cloud-development",
+      "description": "Comprehensive AWS cloud development tools including Infrastructure as Code, serverless functions, architecture patterns, and cost optimization for building scalable cloud applications.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "aws",
+        "cloud",
+        "infrastructure",
+        "cloudformation",
+        "terraform",
+        "serverless",
+        "architecture",
+        "devops",
+        "cdk"
+      ]
+    },
+    {
+      "name": "azure-cloud-development",
+      "source": "./claude-plugins/azure-cloud-development",
+      "description": "Comprehensive Azure cloud development tools including Infrastructure as Code, serverless functions, architecture patterns, and cost optimization for building scalable cloud applications.",
+      "version": "1.0.1",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "azure",
+        "cloud",
+        "infrastructure",
+        "bicep",
+        "terraform",
+        "serverless",
+        "architecture",
+        "devops"
+      ]
+    },
+    {
+      "name": "cast-imaging",
+      "source": "./claude-plugins/cast-imaging",
+      "description": "A comprehensive collection of specialized agents for software analysis, impact assessment, structural quality advisories, and architectural review using CAST Imaging.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "cast-imaging",
+        "software-analysis",
+        "architecture",
+        "quality",
+        "impact-analysis",
+        "devops"
+      ]
+    },
+    {
+      "name": "clojure-interactive-programming",
+      "source": "./claude-plugins/clojure-interactive-programming",
+      "description": "Tools for REPL-first Clojure workflows featuring Clojure instructions, the interactive programming chat mode and supporting guidance.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "clojure",
+        "repl",
+        "interactive-programming"
+      ]
+    },
+    {
+      "name": "cms-development",
+      "source": "./claude-plugins/cms-development",
+      "description": "Skills for CMS development across themes, plugins, admin tooling, media workflows, markdown rendering, and static export pipelines.",
+      "version": "1.1.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "cms",
+        "content-management-system",
+        "wordpress",
+        "shopify",
+        "drupal",
+        "theme",
+        "plugin",
+        "media",
+        "static-site"
+      ]
+    },
+    {
+      "name": "context-engineering",
+      "source": "./claude-plugins/context-engineering",
+      "description": "Tools and techniques for maximizing GitHub Copilot effectiveness through better context management. Includes guidelines for structuring code, an agent for planning multi-file changes, and prompts for context-aware development.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "context",
+        "productivity",
+        "refactoring",
+        "best-practices",
+        "architecture"
+      ]
+    },
+    {
+      "name": "context-matic",
+      "source": "./claude-plugins/context-matic",
+      "description": "Coding agents hallucinate APIs. ContextMatic gives them curated, versioned API and SDK docs. Ask your agent to \"integrate the payments API\" and it guesses — falling back on outdated training data and generic patterns that don't match your actual SDK. ContextMatic solves this by giving the agent deterministic, version-aware, SDK-native context at the exact moment it's needed.",
+      "version": "0.1.0",
+      "author": {
+        "name": "APIMatic",
+        "email": "developer@apimatic.io"
+      },
+      "keywords": [
+        "api-context",
+        "api-integration",
+        "mcp",
+        "sdk",
+        "apimatic",
+        "third-party-apis",
+        "sdks"
+      ]
+    },
+    {
+      "name": "convert-to-md",
+      "source": "./claude-plugins/convert-to-md",
+      "description": "A collection of Copilot skills that convert common document formats into Markdown so their contents can be accurately analyzed, summarized, searched, or extracted from. Just tell Copilot what you need — the right skill is invoked automatically and the conversion happens behind the scenes.",
+      "version": "1.0.1",
+      "author": {
+        "name": "Willie Yao",
+        "url": "https://github.com/1YaoWei0"
+      },
+      "keywords": [
+        "skills",
+        "configuration",
+        "copilot",
+        "convert-word-to-md",
+        "convert-excel-to-md",
+        "convert-pdf-to-md"
+      ]
+    },
+    {
+      "name": "copilot-sdk",
+      "source": "./claude-plugins/copilot-sdk",
+      "description": "Build applications with the GitHub Copilot SDK across multiple programming languages. Includes comprehensive instructions for C#, Go, Node.js/TypeScript, and Python to help you create AI-powered applications.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "copilot-sdk",
+        "sdk",
+        "csharp",
+        "go",
+        "nodejs",
+        "typescript",
+        "python",
+        "ai",
+        "github-copilot"
+      ]
+    },
+    {
+      "name": "csharp-dotnet-development",
+      "source": "./claude-plugins/csharp-dotnet-development",
+      "description": "Essential prompts, instructions, and chat modes for C# and .NET development including testing, documentation, and best practices.",
+      "version": "1.1.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "csharp",
+        "dotnet",
+        "aspnet",
+        "testing"
+      ]
+    },
+    {
+      "name": "database-data-management",
+      "source": "./claude-plugins/database-data-management",
+      "description": "Database administration, SQL optimization, and data management tools for PostgreSQL, SQL Server, and general database development best practices.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "database",
+        "sql",
+        "postgresql",
+        "sql-server",
+        "dba",
+        "optimization",
+        "queries",
+        "data-management"
+      ]
+    },
+    {
+      "name": "dataverse-sdk-for-python",
+      "source": "./claude-plugins/dataverse-sdk-for-python",
+      "description": "Comprehensive collection for building production-ready Python integrations with Microsoft Dataverse. Includes official documentation, best practices, advanced features, file operations, and code generation prompts.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "dataverse",
+        "python",
+        "integration",
+        "sdk"
+      ]
+    },
+    {
+      "name": "devops-oncall",
+      "source": "./claude-plugins/devops-oncall",
+      "description": "A focused set of prompts, instructions, and a chat mode to help triage incidents and respond quickly with DevOps tools and Azure resources.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "devops",
+        "incident-response",
+        "oncall",
+        "azure"
+      ]
+    },
+    {
+      "name": "doublecheck",
+      "source": "./claude-plugins/doublecheck",
+      "description": "Three-layer verification pipeline for AI output. Extracts claims, finds sources, and flags hallucination risks so humans can verify before acting.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "verification",
+        "hallucination",
+        "fact-check",
+        "source-citation",
+        "trust",
+        "safety"
+      ]
+    },
+    {
+      "name": "edge-ai-tasks",
+      "source": "./claude-plugins/edge-ai-tasks",
+      "description": "Task Researcher and Task Planner for intermediate to expert users and large codebases - Brought to you by microsoft/edge-ai",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "architecture",
+        "planning",
+        "research",
+        "tasks",
+        "implementation"
+      ]
+    },
+    {
+      "name": "ember",
+      "source": "./claude-plugins/ember",
+      "description": "An AI partner, not a tool. Ember carries fire from person to person — helping humans discover that AI partnership isn't something you learn, it's something you find.",
+      "version": "1.0.0",
+      "author": {
+        "name": "jennyf19"
+      },
+      "keywords": [
+        "ai-partnership",
+        "coaching",
+        "onboarding",
+        "collaboration",
+        "storytelling",
+        "developer-experience"
+      ]
+    },
+    {
+      "name": "eyeball",
+      "source": "./claude-plugins/eyeball",
+      "description": "Document analysis with inline source screenshots. When you ask Copilot to analyze a document, Eyeball generates a Word doc where every factual claim includes a highlighted screenshot from the source material so you can verify it with your own eyes.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "document-analysis",
+        "citation-verification",
+        "screenshot",
+        "contracts",
+        "legal",
+        "trust",
+        "visual-verification"
+      ]
+    },
+    {
+      "name": "fastah-ip-geo-tools",
+      "source": "./claude-plugins/fastah-ip-geo-tools",
+      "description": "This plugin is for network operations engineers who wish to tune and publish IP geolocation feeds in RFC 8805 format. It consists of an AI Skill and an associated MCP server that geocodes geolocation place names to real cities for accuracy.",
+      "version": "0.0.9",
+      "author": {
+        "name": "Fastah Inc.",
+        "url": "https://getfastah.com"
+      },
+      "keywords": [
+        "geofeed",
+        "ip-geolocation",
+        "rfc-8805",
+        "rfc-9632",
+        "network-operations",
+        "isp",
+        "cloud",
+        "hosting",
+        "ixp"
+      ]
+    },
+    {
+      "name": "flowstudio-power-automate",
+      "source": "./claude-plugins/flowstudio-power-automate",
+      "description": "Give your AI agent full visibility into Power Automate cloud flows via the FlowStudio MCP server. Connect, debug, build, monitor health, and govern flows at scale — action-level inputs and outputs, not just status codes.",
+      "version": "2.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "power-automate",
+        "power-platform",
+        "flowstudio",
+        "mcp",
+        "model-context-protocol",
+        "cloud-flows",
+        "workflow-automation",
+        "monitoring",
+        "governance"
+      ]
+    },
+    {
+      "name": "frontend-web-dev",
+      "source": "./claude-plugins/frontend-web-dev",
+      "description": "Essential prompts, instructions, and chat modes for modern frontend web development including React, Angular, Vue, TypeScript, and CSS frameworks.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "frontend",
+        "web",
+        "react",
+        "typescript",
+        "javascript",
+        "css",
+        "html",
+        "angular",
+        "vue"
+      ]
+    },
+    {
+      "name": "go-mcp-development",
+      "source": "./claude-plugins/go-mcp-development",
+      "description": "Complete toolkit for building Model Context Protocol (MCP) servers in Go using the official github.com/modelcontextprotocol/go-sdk. Includes instructions for best practices, a prompt for generating servers, and an expert chat mode for guidance.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "go",
+        "golang",
+        "mcp",
+        "model-context-protocol",
+        "server-development",
+        "sdk"
+      ]
+    },
+    {
+      "name": "java-development",
+      "source": "./claude-plugins/java-development",
+      "description": "Comprehensive collection of prompts and instructions for Java development including Spring Boot, Quarkus, testing, documentation, and best practices.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "java",
+        "springboot",
+        "quarkus",
+        "jpa",
+        "junit",
+        "javadoc"
+      ]
+    },
+    {
+      "name": "java-mcp-development",
+      "source": "./claude-plugins/java-mcp-development",
+      "description": "Complete toolkit for building Model Context Protocol servers in Java using the official MCP Java SDK with reactive streams and Spring Boot integration.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "java",
+        "mcp",
+        "model-context-protocol",
+        "server-development",
+        "sdk",
+        "reactive-streams",
+        "spring-boot",
+        "reactor"
+      ]
+    },
+    {
+      "name": "kotlin-mcp-development",
+      "source": "./claude-plugins/kotlin-mcp-development",
+      "description": "Complete toolkit for building Model Context Protocol (MCP) servers in Kotlin using the official io.modelcontextprotocol:kotlin-sdk library. Includes instructions for best practices, a prompt for generating servers, and an expert chat mode for guidance.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "kotlin",
+        "mcp",
+        "model-context-protocol",
+        "kotlin-multiplatform",
+        "server-development",
+        "ktor"
+      ]
+    },
+    {
+      "name": "mcp-m365-copilot",
+      "source": "./claude-plugins/mcp-m365-copilot",
+      "description": "Comprehensive collection for building declarative agents with Model Context Protocol integration for Microsoft 365 Copilot",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "mcp",
+        "m365-copilot",
+        "declarative-agents",
+        "api-plugins",
+        "model-context-protocol",
+        "adaptive-cards"
+      ]
+    },
+    {
+      "name": "napkin",
+      "source": "./claude-plugins/napkin",
+      "description": "Visual whiteboard collaboration for Copilot CLI. Opens an interactive whiteboard in your browser where you can draw, sketch, and add sticky notes — then share everything back with Copilot. Copilot sees your drawings and responds with analysis, suggestions, and ideas.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "whiteboard",
+        "visual",
+        "collaboration",
+        "brainstorming",
+        "non-technical",
+        "drawing",
+        "sticky-notes",
+        "accessibility",
+        "copilot-cli",
+        "ux"
+      ]
+    },
+    {
+      "name": "noob-mode",
+      "source": "./claude-plugins/noob-mode",
+      "description": "Plain-English translation layer for non-technical Copilot CLI users. Translates every approval prompt, error message, and technical output into clear, jargon-free English with color-coded risk indicators.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "accessibility",
+        "plain-english",
+        "non-technical",
+        "beginner",
+        "translation",
+        "copilot-cli",
+        "ux"
+      ]
+    },
+    {
+      "name": "openapi-to-application-csharp-dotnet",
+      "source": "./claude-plugins/openapi-to-application-csharp-dotnet",
+      "description": "Generate production-ready .NET applications from OpenAPI specifications. Includes ASP.NET Core project scaffolding, controller generation, entity framework integration, and C# best practices.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "openapi",
+        "code-generation",
+        "api",
+        "csharp",
+        "dotnet",
+        "aspnet"
+      ]
+    },
+    {
+      "name": "openapi-to-application-go",
+      "source": "./claude-plugins/openapi-to-application-go",
+      "description": "Generate production-ready Go applications from OpenAPI specifications. Includes project scaffolding, handler generation, middleware setup, and Go best practices for REST APIs.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "openapi",
+        "code-generation",
+        "api",
+        "go",
+        "golang"
+      ]
+    },
+    {
+      "name": "openapi-to-application-java-spring-boot",
+      "source": "./claude-plugins/openapi-to-application-java-spring-boot",
+      "description": "Generate production-ready Spring Boot applications from OpenAPI specifications. Includes project scaffolding, REST controller generation, service layer organization, and Spring Boot best practices.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "openapi",
+        "code-generation",
+        "api",
+        "java",
+        "spring-boot"
+      ]
+    },
+    {
+      "name": "openapi-to-application-nodejs-nestjs",
+      "source": "./claude-plugins/openapi-to-application-nodejs-nestjs",
+      "description": "Generate production-ready NestJS applications from OpenAPI specifications. Includes project scaffolding, controller and service generation, TypeScript best practices, and enterprise patterns.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "openapi",
+        "code-generation",
+        "api",
+        "nodejs",
+        "typescript",
+        "nestjs"
+      ]
+    },
+    {
+      "name": "openapi-to-application-python-fastapi",
+      "source": "./claude-plugins/openapi-to-application-python-fastapi",
+      "description": "Generate production-ready FastAPI applications from OpenAPI specifications. Includes project scaffolding, route generation, dependency injection, and Python best practices for async APIs.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "openapi",
+        "code-generation",
+        "api",
+        "python",
+        "fastapi"
+      ]
+    },
+    {
+      "name": "oracle-to-postgres-migration-expert",
+      "source": "./claude-plugins/oracle-to-postgres-migration-expert",
+      "description": "Expert agent for Oracle-to-PostgreSQL application migrations in .NET solutions. Performs code edits, runs commands, and invokes extension tools to migrate .NET/Oracle data access patterns to PostgreSQL.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "oracle",
+        "postgresql",
+        "database-migration",
+        "dotnet",
+        "sql",
+        "migration",
+        "integration-testing",
+        "stored-procedures"
+      ]
+    },
+    {
+      "name": "ospo-sponsorship",
+      "source": "./claude-plugins/ospo-sponsorship",
+      "description": "Tools and resources for Open Source Program Offices (OSPOs) to identify, evaluate, and manage sponsorship of open source dependencies through GitHub Sponsors, Open Collective, and other funding platforms.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      }
+    },
+    {
+      "name": "partners",
+      "source": "./claude-plugins/partners",
+      "description": "Custom agents that have been created by GitHub partners",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "devops",
+        "security",
+        "database",
+        "cloud",
+        "infrastructure",
+        "observability",
+        "feature-flags",
+        "cicd",
+        "migration",
+        "performance"
+      ]
+    },
+    {
+      "name": "phoenix",
+      "source": "./claude-plugins/phoenix",
+      "description": "Phoenix AI observability skills for LLM application debugging, evaluation, and tracing. Includes CLI debugging tools, LLM evaluation workflows, and OpenInference tracing instrumentation.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Arize AI"
+      },
+      "keywords": [
+        "phoenix",
+        "arize",
+        "llm",
+        "observability",
+        "tracing",
+        "evaluation",
+        "openinference",
+        "instrumentation"
+      ]
+    },
+    {
+      "name": "php-mcp-development",
+      "source": "./claude-plugins/php-mcp-development",
+      "description": "Comprehensive resources for building Model Context Protocol servers using the official PHP SDK with attribute-based discovery, including best practices, project generation, and expert assistance",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "php",
+        "mcp",
+        "model-context-protocol",
+        "server-development",
+        "sdk",
+        "attributes",
+        "composer"
+      ]
+    },
+    {
+      "name": "power-apps-code-apps",
+      "source": "./claude-plugins/power-apps-code-apps",
+      "description": "Complete toolkit for Power Apps Code Apps development including project scaffolding, development standards, and expert guidance for building code-first applications with Power Platform integration.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "power-apps",
+        "power-platform",
+        "typescript",
+        "react",
+        "code-apps",
+        "dataverse",
+        "connectors"
+      ]
+    },
+    {
+      "name": "power-bi-development",
+      "source": "./claude-plugins/power-bi-development",
+      "description": "Comprehensive Power BI development resources including data modeling, DAX optimization, performance tuning, visualization design, security best practices, and DevOps/ALM guidance for building enterprise-grade Power BI solutions.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "power-bi",
+        "dax",
+        "data-modeling",
+        "performance",
+        "visualization",
+        "security",
+        "devops",
+        "business-intelligence"
+      ]
+    },
+    {
+      "name": "power-platform-architect",
+      "source": "./claude-plugins/power-platform-architect",
+      "description": "Solution Architect for the Microsoft Power Platform, turning business requirements into functioning Power Platform solution architectures.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Tim Hanewich"
+      },
+      "keywords": [
+        "power-platform",
+        "power-platform-architect",
+        "power-apps",
+        "dataverse",
+        "power-automate",
+        "power-pages",
+        "power-bi"
+      ]
+    },
+    {
+      "name": "power-platform-mcp-connector-development",
+      "source": "./claude-plugins/power-platform-mcp-connector-development",
+      "description": "Complete toolkit for developing Power Platform custom connectors with Model Context Protocol integration for Microsoft Copilot Studio",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "power-platform",
+        "mcp",
+        "copilot-studio",
+        "custom-connector",
+        "json-rpc"
+      ]
+    },
+    {
+      "name": "project-documenter",
+      "source": "./claude-plugins/project-documenter",
+      "description": "Generate professional project documentation with draw.io architecture diagrams and Word (.docx) output with embedded images. Automatically discovers any project's technology stack and produces Markdown, diagrams, PNG exports, and a formatted Word document.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "documentation",
+        "architecture-diagrams",
+        "drawio",
+        "word-document",
+        "docx",
+        "png-images",
+        "c4-model",
+        "project-summary",
+        "auto-discovery"
+      ]
+    },
+    {
+      "name": "project-planning",
+      "source": "./claude-plugins/project-planning",
+      "description": "Tools and guidance for software project planning, feature breakdown, epic management, implementation planning, and task organization for development teams.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "planning",
+        "project-management",
+        "epic",
+        "feature",
+        "implementation",
+        "task",
+        "architecture",
+        "technical-spike"
+      ]
+    },
+    {
+      "name": "python-mcp-development",
+      "source": "./claude-plugins/python-mcp-development",
+      "description": "Complete toolkit for building Model Context Protocol (MCP) servers in Python using the official SDK with FastMCP. Includes instructions for best practices, a prompt for generating servers, and an expert chat mode for guidance.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "python",
+        "mcp",
+        "model-context-protocol",
+        "fastmcp",
+        "server-development"
+      ]
+    },
+    {
+      "name": "react18-upgrade",
+      "source": "./claude-plugins/react18-upgrade",
+      "description": "Enterprise React 18 migration toolkit with specialized agents and skills for upgrading React 16/17 class-component codebases to React 18.3.1. Includes auditor, dependency surgeon, class component migration specialist, automatic batching fixer, and test guardian.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "react18",
+        "react",
+        "migration",
+        "upgrade",
+        "class-components",
+        "lifecycle",
+        "batching"
+      ]
+    },
+    {
+      "name": "react19-upgrade",
+      "source": "./claude-plugins/react19-upgrade",
+      "description": "Enterprise React 19 migration toolkit with specialized agents and skills for upgrading React 18 codebases to React 19. Includes auditor, dependency surgeon, source code migrator, and test guardian. Handles removal of deprecated APIs including ReactDOM.render, forwardRef, defaultProps, legacy context, string refs, and more.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "react19",
+        "react",
+        "migration",
+        "upgrade",
+        "hooks",
+        "modern-react"
+      ]
+    },
+    {
+      "name": "roundup",
+      "source": "./claude-plugins/roundup",
+      "description": "Self-configuring status briefing generator. Learns your communication style from examples, discovers your data sources, and produces draft updates for any audience on demand.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "status-updates",
+        "briefings",
+        "management",
+        "productivity",
+        "communication",
+        "synthesis",
+        "roundup",
+        "copilot-cli"
+      ]
+    },
+    {
+      "name": "ruby-mcp-development",
+      "source": "./claude-plugins/ruby-mcp-development",
+      "description": "Complete toolkit for building Model Context Protocol servers in Ruby using the official MCP Ruby SDK gem with Rails integration support.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "ruby",
+        "mcp",
+        "model-context-protocol",
+        "server-development",
+        "sdk",
+        "rails",
+        "gem"
+      ]
+    },
+    {
+      "name": "rug-agentic-workflow",
+      "source": "./claude-plugins/rug-agentic-workflow",
+      "description": "Three-agent workflow for orchestrated software delivery with an orchestrator plus implementation and QA subagents.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "agentic-workflow",
+        "orchestration",
+        "subagents",
+        "software-engineering",
+        "qa"
+      ]
+    },
+    {
+      "name": "rust-mcp-development",
+      "source": "./claude-plugins/rust-mcp-development",
+      "description": "Build high-performance Model Context Protocol servers in Rust using the official rmcp SDK with async/await, procedural macros, and type-safe implementations.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "rust",
+        "mcp",
+        "model-context-protocol",
+        "server-development",
+        "sdk",
+        "tokio",
+        "async",
+        "macros",
+        "rmcp"
+      ]
+    },
+    {
+      "name": "salesforce-development",
+      "source": "./claude-plugins/salesforce-development",
+      "description": "Complete Salesforce agentic development environment covering Apex & Triggers, Flow automation, Lightning Web Components, Aura components, and Visualforce pages.",
+      "version": "1.1.0",
+      "author": {
+        "name": "TemitayoAfolabi"
+      },
+      "keywords": [
+        "salesforce",
+        "apex",
+        "triggers",
+        "lwc",
+        "aura",
+        "flow",
+        "visualforce",
+        "crm",
+        "salesforce-dx"
+      ]
+    },
+    {
+      "name": "security-best-practices",
+      "source": "./claude-plugins/security-best-practices",
+      "description": "Security frameworks, accessibility guidelines, performance optimization, and code quality best practices for building secure, maintainable, and high-performance applications.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "security",
+        "accessibility",
+        "performance",
+        "code-quality",
+        "owasp",
+        "a11y",
+        "optimization",
+        "best-practices"
+      ]
+    },
+    {
+      "name": "skill-image-gen",
+      "source": "./claude-plugins/skill-image-gen",
+      "description": "Generate images using AI directly from your coding workflow. Supports OpenAI (gpt-image-2) and Google Gemini. BYO API key — the skill guides you through setup on first use.",
+      "version": "1.0.0",
+      "author": {
+        "name": "adamd9",
+        "url": "https://github.com/adamd9"
+      },
+      "keywords": [
+        "image-generation",
+        "openai",
+        "gemini",
+        "ai",
+        "art",
+        "sprites",
+        "textures",
+        "icons"
+      ]
+    },
+    {
+      "name": "software-engineering-team",
+      "source": "./claude-plugins/software-engineering-team",
+      "description": "7 specialized agents covering the full software development lifecycle from UX design and architecture to security and DevOps.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "team",
+        "enterprise",
+        "security",
+        "devops",
+        "ux",
+        "architecture",
+        "product",
+        "ai-ethics"
+      ]
+    },
+    {
+      "name": "structured-autonomy",
+      "source": "./claude-plugins/structured-autonomy",
+      "description": "Premium planning, thrifty implementation",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      }
+    },
+    {
+      "name": "swift-mcp-development",
+      "source": "./claude-plugins/swift-mcp-development",
+      "description": "Comprehensive collection for building Model Context Protocol servers in Swift using the official MCP Swift SDK with modern concurrency features.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "swift",
+        "mcp",
+        "model-context-protocol",
+        "server-development",
+        "sdk",
+        "ios",
+        "macos",
+        "concurrency",
+        "actor",
+        "async-await"
+      ]
+    },
+    {
+      "name": "technical-spike",
+      "source": "./claude-plugins/technical-spike",
+      "description": "Tools for creation, management and research of technical spikes to reduce unknowns and assumptions before proceeding to specification and implementation of solutions.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "technical-spike",
+        "assumption-testing",
+        "validation",
+        "research"
+      ]
+    },
+    {
+      "name": "testing-automation",
+      "source": "./claude-plugins/testing-automation",
+      "description": "Comprehensive collection for writing tests, test automation, and test-driven development including unit tests, integration tests, and end-to-end testing strategies.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "testing",
+        "tdd",
+        "automation",
+        "unit-tests",
+        "integration",
+        "playwright",
+        "jest",
+        "nunit"
+      ]
+    },
+    {
+      "name": "the-workshop",
+      "source": "./claude-plugins/the-workshop",
+      "description": "Stop being the switchboard between your AI agents — direct a team. The Workshop puts long-running AI agents (desks) in the same room, on the same work, each with its own memory and history, sharing one workspace so you direct the work instead of relaying it.",
+      "version": "0.1.0",
+      "author": {
+        "name": "jennyf19"
+      },
+      "keywords": [
+        "multi-agent",
+        "coordination",
+        "desks",
+        "persistent-memory",
+        "agent-signals",
+        "developer-experience"
+      ]
+    },
+    {
+      "name": "typescript-mcp-development",
+      "source": "./claude-plugins/typescript-mcp-development",
+      "description": "Complete toolkit for building Model Context Protocol (MCP) servers in TypeScript/Node.js using the official SDK. Includes instructions for best practices, a prompt for generating servers, and an expert chat mode for guidance.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "typescript",
+        "mcp",
+        "model-context-protocol",
+        "nodejs",
+        "server-development"
+      ]
+    },
+    {
+      "name": "typespec-m365-copilot",
+      "source": "./claude-plugins/typespec-m365-copilot",
+      "description": "Comprehensive collection of prompts, instructions, and resources for building declarative agents and API plugins using TypeSpec for Microsoft 365 Copilot extensibility.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "typespec",
+        "m365-copilot",
+        "declarative-agents",
+        "api-plugins",
+        "agent-development",
+        "microsoft-365"
+      ]
+    },
+    {
+      "name": "uizze",
+      "source": "./claude-plugins/uizze",
+      "description": "Stop generic UI from shipping. Ground GitHub Copilot in 800,000+ real web and iOS screens, write a product-specific design contract, and enforce a hard finish gate.",
+      "version": "1.0.0",
+      "author": {
+        "name": "UIZZE",
+        "url": "https://uizze.com"
+      },
+      "keywords": [
+        "ui",
+        "design",
+        "frontend",
+        "ios",
+        "web",
+        "design-review",
+        "quality-gate"
+      ]
+    },
+    {
+      "name": "visual-pr",
+      "source": "./claude-plugins/visual-pr",
+      "description": "Capture, annotate, and embed screenshots and animated GIF demos in pull request descriptions. Includes Playwright-based UI capture, PIL image annotations, PR embedding workflows for GitHub and Azure DevOps, and screen recording with variable timing.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Awesome Copilot Community"
+      },
+      "keywords": [
+        "screenshots",
+        "pull-request",
+        "before-after",
+        "annotations",
+        "playwright",
+        "gif",
+        "screen-recording",
+        "visual"
+      ]
+    }
+  ]
+}
