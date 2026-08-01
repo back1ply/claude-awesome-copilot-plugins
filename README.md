@@ -118,6 +118,8 @@ node sync.mjs --merge-upstream    # merge upstream/main, then regenerate
 node sync.mjs                     # regenerate from the current tree only
 ```
 
+This runs daily via [`.github/workflows/sync-port.yml`](.github/workflows/sync-port.yml), which merges upstream, regenerates, and pushes — or opens an issue if the merge needs a human. Upstream's own 42 workflows are deleted from this fork (they publish sites, call webhooks, and run agentic jobs that must not fire here), and the workflow re-deletes any that arrive in a merge.
+
 Upstream regenerates its own `README.md`, so every merge conflicts there. Resolve it once with a merge driver:
 
 ```
