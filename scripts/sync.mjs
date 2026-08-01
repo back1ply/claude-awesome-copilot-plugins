@@ -3,8 +3,8 @@
 // Reads plugins/, skills/, agents/ (upstream's, untouched) and writes
 // claude-plugins/ + .claude-plugin/marketplace.json. Idempotent.
 //
-//   node sync.mjs                    # regenerate from the current tree
-//   node sync.mjs --merge-upstream   # git fetch + merge upstream/main first
+//   node scripts/sync.mjs                    # regenerate from the current tree
+//   node scripts/sync.mjs --merge-upstream   # git fetch + merge upstream/main first
 //
 // ponytail: no deps, no YAML lib. Frontmatter is rewritten line-wise with
 // block awareness (a top-level `key:` owns every following indented line).
@@ -14,7 +14,7 @@ import path from "node:path";
 import { execFileSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 
-const ROOT = path.dirname(fileURLToPath(import.meta.url));
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const UPSTREAM = ROOT; // this repo is a fork — upstream's tree is already here
 const OUT_DIR = "claude-plugins"; // upstream already owns ./plugins
 const OUT_PLUGINS = path.join(ROOT, OUT_DIR);
@@ -299,8 +299,8 @@ ${rows}
 
 \`\`\`
 git remote add upstream https://github.com/github/awesome-copilot.git   # once
-node sync.mjs --merge-upstream    # merge upstream/main, then regenerate
-node sync.mjs                     # regenerate from the current tree only
+node scripts/sync.mjs --merge-upstream    # merge upstream/main, then regenerate
+node scripts/sync.mjs                     # regenerate from the current tree only
 \`\`\`
 
 This runs daily via [\`.github/workflows/sync-port.yml\`](.github/workflows/sync-port.yml), which merges upstream, regenerates, and pushes — or opens an issue if the merge needs a human. Upstream's own 42 workflows are deleted from this fork (they publish sites, call webhooks, and run agentic jobs that must not fire here), and the workflow re-deletes any that arrive in a merge.

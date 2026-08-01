@@ -85,13 +85,18 @@ jobs:
         run: |
           gh issue create \
             --title "Upstream merge needs manual resolution (${{ steps.fetch.outputs.sha }})" \
-            --body "$(printf 'Automatic sync stopped: merging upstream/main conflicts in files this workflow will not resolve on its own.\n\nConflicting paths:\n```\n%s\n```\n\nResolve locally:\n```\ngit fetch upstream main\ngit merge upstream/main\nnode sync.mjs\n```\n' '${{ steps.merge.outputs.unexpected }}')"
+            --body "$(printf 'Automatic sync stopped: merging upstream/main conflicts in files this workflow will not resolve on its own.\n\nConflicting paths:\n```\n%s\n```\n\nResolve locally:\n```\ngit fetch upstream main\ngit merge upstream/main\nnode scripts/sync.mjs\n```\n' '${{ steps.merge.outputs.unexpected }}')"
 
       - name: Drop inherited upstream workflows
         run: find .github/workflows -type f ! -name "$KEEP_WORKFLOW" -delete
 
       - name: Regenerate port
-        run: node sync.mjs
+        id: generate
+        run: |
+          node scripts/sync.mjs | tee /tmp/sync.log
+          grep '^Generated' /tmp/sync.log >> "$GITHUB_STEP_SUMMARY" || true
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "Upstream: \`${{ steps.fetch.outputs.sha }}\`" >> "$GITHUB_STEP_SUMMARY"
 
       - name: Commit and push
         run: |

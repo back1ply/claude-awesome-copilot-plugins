@@ -114,8 +114,8 @@ Upstream's `plugins/`, `skills/`, `agents/` and everything else are untouched â€
 
 ```
 git remote add upstream https://github.com/github/awesome-copilot.git   # once
-node sync.mjs --merge-upstream    # merge upstream/main, then regenerate
-node sync.mjs                     # regenerate from the current tree only
+node scripts/sync.mjs --merge-upstream    # merge upstream/main, then regenerate
+node scripts/sync.mjs                     # regenerate from the current tree only
 ```
 
 This runs daily via [`.github/workflows/sync-port.yml`](.github/workflows/sync-port.yml), which merges upstream, regenerates, and pushes â€” or opens an issue if the merge needs a human. Upstream's own 42 workflows are deleted from this fork (they publish sites, call webhooks, and run agentic jobs that must not fire here), and the workflow re-deletes any that arrive in a merge.

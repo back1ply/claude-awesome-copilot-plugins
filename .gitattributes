@@ -30,3 +30,6 @@
 .github/workflows/*.lock.yml linguist-generated=true merge=ours
 # Port-specific: keep this fork's README on upstream merges (needs: git config merge.ours.driver true)
 README.md merge=ours
+
+# Both sides append here — take both rather than conflicting on every upstream merge.
+.gitattributes merge=union
