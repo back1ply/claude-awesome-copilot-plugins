@@ -15,7 +15,7 @@ Upstream's `plugins/`, `skills/`, `agents/` and everything else are untouched �
 
 ## Plugins
 
-118 plugins — 600 skills, 232 agents.
+118 plugins — 601 skills, 232 agents.
 
 | Plugin | Contents | Description |
 | --- | --- | --- |
@@ -91,7 +91,7 @@ Upstream's `plugins/`, `skills/`, `agents/` and everything else are untouched �
 | [`extras-gem-team`](claude-plugins/extras-gem-team/) | 16 agents | The gem-team multi-agent suite: planning, implementation, review, testing and design agents. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
 | [`extras-salesforce`](claude-plugins/extras-salesforce/) | 1 agent | Salesforce: Apex, Lightning Web Components and Flow. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
 | [`extras-power-platform`](claude-plugins/extras-power-platform/) | 2 skills | Power BI, Power Apps, Power Platform and Dataverse. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
-| [`extras-azure`](claude-plugins/extras-azure/) | 17 skills, 9 agents | Azure architecture, IaC, diagnostics and platform services. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
+| [`extras-azure`](claude-plugins/extras-azure/) | 18 skills, 9 agents | Azure architecture, IaC, diagnostics and platform services. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
 | [`extras-aws`](claude-plugins/extras-aws/) | 2 skills, 2 agents | AWS architecture, cost and diagnostics. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
 | [`extras-dotnet`](claude-plugins/extras-dotnet/) | 16 skills, 7 agents | .NET, C# and Windows desktop development. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
 | [`extras-java-jvm`](claude-plugins/extras-java-jvm/) | 9 skills | Java, Kotlin and Spring development. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
@@ -157,7 +157,7 @@ Upstream's `plugins/`, `skills/`, `agents/` and everything else are untouched �
 
 - **`instructions/`** — 190 `*.instructions.md` files scoped by `applyTo:` globs. Claude Code has no glob-scoped context primitive; converting them to skills or `CLAUDE.md` is a lossy judgment call, deferred.
 - **`hooks/`, `workflows/`** — Copilot's event model and GitHub Actions agentic workflows, different runtime.
-- **Unbundled skills** — upstream ships 399 skills and 224 agents, but only 589 skills belong to a curated plugin. Only the bundled ones are here.
+- **Unbundled skills** — upstream ships 400 skills and 224 agents, but only 590 skills belong to a curated plugin. Only the bundled ones are here.
 
 ## Staying in sync with upstream
 
@@ -177,4 +177,4 @@ git config merge.ours.driver true    # .gitattributes already maps README.md to 
 
 Everything under `claude-plugins/` and `.claude-plugin/` is generated — edit `sync.mjs`, not the output. The script self-checks the result and exits non-zero on any structural problem.
 
-Built from upstream content at commit `9db369d00f12`.
+Built from upstream content at commit `6c7fe1b15f1b`.

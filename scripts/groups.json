@@ -36,6 +36,7 @@
     "azure-architecture-autopilot": "azure",
     "azure-container-registry-cli": "azure",
     "azure-deployment-preflight": "azure",
+    "azure-developer-cli": "azure",
     "azure-devops-cli": "azure",
     "azure-iac-exporter": "azure",
     "azure-iac-generator": "azure",
