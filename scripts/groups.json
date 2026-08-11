@@ -363,6 +363,7 @@
     "microsoft-docs": "docs-writing",
     "microsoft-skill-creator": "ai-agents",
     "microsoft-study-mode": "learning-teaching",
+    "migrating-oracle-to-postgres-data-access-code": "data-sql",
     "migrating-oracle-to-postgres-stored-procedures": "data-sql",
     "minecraft-plugin-development": "web-frontend",
     "mini-context-graph": "codebase-analysis",
