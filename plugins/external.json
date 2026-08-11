@@ -54,6 +54,32 @@
     }
   },
   {
+    "name": "apify",
+    "description": "Helps devs extract data from any website with thousands of trusted scrapers, crawlers, and automations from Apify Store. Integrate ready-made Actors to access all popular social media, video, e-commerce, search engines, maps, and travel sites. Build, debug, publish, and monetize new Actors on Apify.",
+    "version": "1.0.0",
+    "author": {
+      "name": "Jakub-Vacek",
+      "url": "https://apify.com"
+    },
+    "repository": "https://github.com/apify/apify-github-copilot-plugin",
+    "license": "Apache-2.0",
+    "keywords": [
+      "automation",
+      "copilot",
+      "github",
+      "apify",
+      "actors",
+      "scrape",
+      "crawl"
+    ],
+    "source": {
+      "source": "github",
+      "repo": "apify/apify-github-copilot-plugin",
+      "path": "apify",
+      "sha": "84136d82da104af9792040e91392daff098e6ff9"
+    }
+  },
+  {
     "name": "azure",
     "description": "Microsoft Azure MCP Server and skills for cloud resource management, deployments, and Azure services. Manage your Azure infrastructure, monitor applications, and deploy resources directly from Copilot.",
     "version": "1.0.0",
@@ -76,6 +102,31 @@
       "source": "github",
       "repo": "microsoft/azure-skills",
       "path": ".github/plugins/azure-skills"
+    }
+  },
+  {
+    "name": "blea",
+    "description": "Safe, agent-first Bluetooth Low Energy diagnostics with portable evidence capture/diff/replay and guarded writes through a Skill, CLI, and local MCP server.",
+    "version": "0.6.1",
+    "author": {
+      "name": "Nitmi",
+      "url": "https://github.com/Nitmi"
+    },
+    "repository": "https://github.com/Nitmi/blea",
+    "license": "MIT",
+    "keywords": [
+      "bluetooth-low-energy",
+      "ble",
+      "hardware",
+      "agent-plugin",
+      "agent-skill",
+      "cli",
+      "mcp"
+    ],
+    "source": {
+      "source": "github",
+      "repo": "Nitmi/blea",
+      "sha": "5b4b325e5d4a444f328366dff89e81dd2bda36ed"
     }
   },
   {
@@ -104,6 +155,35 @@
       "repo": "juliamuiruri4/brainmaxxing",
       "ref": "v1.0.0",
       "sha": "8a8a102ff3ab8736f015764207cdb7e68fcd5ecf"
+    }
+  },
+  {
+    "name": "catalyst-by-zoho",
+    "description": "Official GitHub Copilot plugin for Catalyst by Zoho — a full-stack serverless cloud platform. Includes skills covering services, SDKs, CLI workflows, architecture patterns, pricing, migration guides, and Zoho MCP resource management.",
+    "version": "0.0.1",
+    "author": {
+      "name": "Catalyst By Zoho",
+      "url": "https://github.com/catalystbyzoho"
+    },
+    "repository": "https://github.com/catalystbyzoho/copilot-plugin",
+    "homepage": "https://catalyst.zoho.com",
+    "license": "Apache-2.0",
+    "keywords": [
+      "catalyst",
+      "zoho",
+      "mcp",
+      "serverless",
+      "cloud",
+      "datastore",
+      "zcql",
+      "appsail",
+      "stratus",
+      "functions"
+    ],
+    "source": {
+      "source": "github",
+      "repo": "catalystbyzoho/copilot-plugin",
+      "sha": "0c2716ca4f28df375529c67b4504b41f7bd29a66"
     }
   },
   {
@@ -389,6 +469,35 @@
     "source": {
       "source": "github",
       "repo": "figma/mcp-server-guide"
+    }
+  },
+  {
+    "name": "foundation-models",
+    "description": "Helps coding agents write and review Apple Foundation Models code for iOS, macOS, visionOS, and watchOS using the SDK installed on the developer's Mac. It verifies real API signatures and availability, then type-checks the result instead of relying on model memory.",
+    "version": "0.1.3",
+    "author": {
+      "name": "Artem Novichkov",
+      "url": "https://github.com/artemnovichkov"
+    },
+    "repository": "https://github.com/artemnovichkov/foundation-models-plugin",
+    "homepage": "https://github.com/artemnovichkov/foundation-models-plugin",
+    "license": "MIT",
+    "keywords": [
+      "swift",
+      "ios",
+      "macos",
+      "apple",
+      "foundation-models",
+      "apple-intelligence",
+      "on-device",
+      "llm",
+      "xcode"
+    ],
+    "source": {
+      "source": "github",
+      "repo": "artemnovichkov/foundation-models-plugin",
+      "ref": "0.1.3",
+      "sha": "5837a9343db97d59107d146024b1dbd858625274"
     }
   },
   {
