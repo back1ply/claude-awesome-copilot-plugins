@@ -169,6 +169,7 @@
     "csharp-xunit": "dotnet",
     "CSharpExpert": "coding-agents",
     "custom-agent-foundry": "ai-agents",
+    "d365-solution-blueprint": "docs-writing",
     "daily-focus-board": "coding-agents",
     "daily-prep": "learning-teaching",
     "data-breach-blast-radius": "security",
