@@ -15,11 +15,11 @@ Upstream's `plugins/`, `skills/`, `agents/` and everything else are untouched �
 
 ## Plugins
 
-49 plugins — 604 skills, 221 agents.
+49 plugins — 603 skills, 221 agents.
 
 | Plugin | Contents | Description |
 | --- | --- | --- |
-| [`extras-gem-team`](claude-plugins/extras-gem-team/) | 2 skills, 13 agents | The gem-team multi-agent suite: planning, implementation, review, testing and design agents. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
+| [`extras-gem-team`](claude-plugins/extras-gem-team/) | 1 skill, 13 agents | The gem-team multi-agent suite: planning, implementation, review, testing and design agents. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
 | [`extras-salesforce`](claude-plugins/extras-salesforce/) | 3 skills, 5 agents | Salesforce: Apex, Lightning Web Components and Flow. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
 | [`extras-power-platform`](claude-plugins/extras-power-platform/) | 18 skills, 6 agents | Power BI, Power Apps, Power Platform and Dataverse. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
 | [`extras-azure`](claude-plugins/extras-azure/) | 20 skills, 17 agents | Azure architecture, IaC, diagnostics and platform services. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
@@ -88,7 +88,7 @@ Upstream's `plugins/`, `skills/`, `agents/` and everything else are untouched �
 
 - **`instructions/`** — 192 `*.instructions.md` files scoped by `applyTo:` globs. Claude Code has no glob-scoped context primitive; converting them to skills or `CLAUDE.md` is a lossy judgment call, deferred.
 - **`hooks/`, `workflows/`** — Copilot's event model and GitHub Actions agentic workflows, different runtime.
-- **Unbundled skills** — upstream ships 412 skills and 221 agents, but only 604 skills belong to a curated plugin. Only the bundled ones are here.
+- **Unbundled skills** — upstream ships 411 skills and 221 agents, but only 603 skills belong to a curated plugin. Only the bundled ones are here.
 
 ## Staying in sync with upstream
 
@@ -108,4 +108,4 @@ git config merge.ours.driver true    # .gitattributes already maps README.md to 
 
 Everything under `claude-plugins/` and `.claude-plugin/` is generated — edit `sync.mjs`, not the output. The script self-checks the result and exits non-zero on any structural problem.
 
-Built from upstream content at commit `4742f265959b`.
+Built from upstream content at commit `d0d9d9f014ab`.
