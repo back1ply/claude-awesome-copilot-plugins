@@ -805,6 +805,12 @@
       }
     },
     {
+      "name": "git-worktree-explorer",
+      "source": "plugins/git-worktree-explorer",
+      "description": "Visualize the active Git repository through worktrees, branches, commits, and optional GitHub pull request context.",
+      "version": "1.0.0"
+    },
+    {
       "name": "github-copilot-modernization",
       "description": "Autonomous application modernization using multi-agent orchestration for GitHub Copilot CLI. Supports Java upgrades (8→21, Spring Boot 2.x→3.x), .NET modernization, Azure migration, CVE/vulnerability fixing, and application rearchitecture (monolith-to-microservices). Features a 3-level agent hierarchy (orchestrator → coordinators → executors) with enterprise rulebook support for embedding organizational policies into the workflow.",
       "version": "1.22.0",
@@ -1340,6 +1346,12 @@
       "version": "1.0.0"
     },
     {
+      "name": "sentry-triage",
+      "source": "plugins/sentry-triage",
+      "description": "Scan live Sentry issues in a Copilot canvas, group them by urgency, and hand issues off for tracking or a fix PR.",
+      "version": "1.0.0"
+    },
+    {
       "name": "signals-dashboard",
       "source": "plugins/signals-dashboard",
       "description": "Real-time Workshop dashboard with agent signals, honesty calibration, cost-aware desk profiles, and fail-closed Local Delegation.",
@@ -1657,7 +1669,7 @@
     {
       "name": "vercel-plugin",
       "description": "Build and deploy web apps and agents. Comprehensive Vercel ecosystem plugin — relational knowledge graph, skills for every major product, specialized agents, and Vercel conventions. Turns any AI agent into a Vercel expert.",
-      "version": "0.43.0",
+      "version": "0.48.1",
       "author": {
         "name": "Vercel",
         "url": "https://github.com/vercel"
@@ -1680,7 +1692,7 @@
       "source": {
         "source": "github",
         "repo": "vercel/vercel-plugin",
-        "sha": "6e51924cb249e2941de005d59f1ac6f768477b98"
+        "sha": "c4a1c4e2e16feefb1d9f2ad2a4a451abd0ae91c6"
       }
     },
     {
@@ -1718,7 +1730,7 @@
       "name": "where-was-i",
       "source": "plugins/where-was-i",
       "description": "Reconstruct your dev context (branch, commits, uncommitted work, PR clues) and trigger a resume prompt to continue quickly.",
-      "version": "1.0.2"
+      "version": "1.1.0"
     },
     {
       "name": "winappcli",
