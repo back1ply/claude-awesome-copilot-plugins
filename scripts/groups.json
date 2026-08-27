@@ -551,6 +551,7 @@
     "snowflake-semanticview": "data-sql",
     "software-engineer-agent-v1": "coding-agents",
     "spark-performance": "data-sql",
+    "speak-summary": "coding-agents",
     "specification": "docs-writing",
     "sponsor-finder": "research-analysis",
     "spring-boot-testing": "java-jvm",
