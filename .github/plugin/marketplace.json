@@ -820,7 +820,7 @@
       "name": "gem-team",
       "source": "plugins/gem-team",
       "description": "Self-Learning Multi-agent orchestration framework for spec-driven development and automated verification. With smarter tool calling and leaner context.",
-      "version": "1.115.0"
+      "version": "1.119.0"
     },
     {
       "name": "gesture-review",
@@ -1034,13 +1034,13 @@
     {
       "name": "microsoft-foundry",
       "description": "Skills and interactive Copilot canvas for designing, configuring, testing and deploying agents to Microsoft Foundry.",
-      "version": "1.0.7",
+      "version": "1.0.8",
       "author": {
         "name": "Microsoft",
         "url": "https://www.microsoft.com"
       },
-      "repository": "https://github.com/microsoft/foundry-toolkit",
-      "homepage": "https://github.com/microsoft/foundry-toolkit",
+      "repository": "https://github.com/microsoft/foundry-dev-tools",
+      "homepage": "https://github.com/microsoft/foundry-dev-tools",
       "license": "MIT",
       "keywords": [
         "agent-builder",
@@ -1053,9 +1053,9 @@
       ],
       "source": {
         "source": "github",
-        "repo": "microsoft/foundry-toolkit",
+        "repo": "microsoft/foundry-dev-tools",
         "path": "microsoft-foundry",
-        "sha": "5d78641be6c789710222bc7248206ace115d5080"
+        "sha": "c879319654fd28740ae42074dd90fd488bfe2064"
       }
     },
     {
