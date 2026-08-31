@@ -500,6 +500,7 @@
     "repo-architect": "coding-agents",
     "repo-standardizer": "coding-agents",
     "repo-story-time": "codebase-analysis",
+    "research-harness-engineer": "research-analysis",
     "research-technical-spike": "research-analysis",
     "resemble-detect": "security",
     "resx-source-generator-migration": "git-workflow",
