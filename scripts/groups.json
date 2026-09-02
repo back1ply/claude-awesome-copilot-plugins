@@ -612,6 +612,7 @@
     "update-llms": "ai-agents",
     "update-markdown-file-index": "docs-writing",
     "update-specification": "docs-writing",
+    "upstash-redis": "coding-agents",
     "vardoger-analyze": "research-analysis",
     "vcpkg": "devops-ci",
     "verify-agent-action": "coding-agents",
