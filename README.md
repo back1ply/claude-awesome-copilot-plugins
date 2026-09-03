@@ -15,7 +15,7 @@ Upstream's `plugins/`, `skills/`, `agents/` and everything else are untouched �
 
 ## Plugins
 
-49 plugins — 608 skills, 222 agents.
+49 plugins — 609 skills, 222 agents.
 
 | Plugin | Contents | Description |
 | --- | --- | --- |
@@ -67,7 +67,7 @@ Upstream's `plugins/`, `skills/`, `agents/` and everything else are untouched �
 | [`instructions-project-planning`](claude-plugins/instructions-project-planning/) | 1 skill | Coding conventions and best-practice guidance for requirements, planning, breakdowns and retrospectives. Ported from github/awesome-copilot custom instructions. |
 | [`instructions-testing`](claude-plugins/instructions-testing/) | 3 skills | Coding conventions and best-practice guidance for test authoring, migration and coverage. Ported from github/awesome-copilot custom instructions. |
 | [`instructions-git-workflow`](claude-plugins/instructions-git-workflow/) | 2 skills | Coding conventions and best-practice guidance for commits, branches, code review and refactoring workflows. Ported from github/awesome-copilot custom instructions. |
-| [`instructions-coding-agents`](claude-plugins/instructions-coding-agents/) | 19 skills | Coding conventions and best-practice guidance for general-purpose engineering agents, reviewer personas and assorted skills. Ported from github/awesome-copilot custom instructions. |
+| [`instructions-coding-agents`](claude-plugins/instructions-coding-agents/) | 20 skills | Coding conventions and best-practice guidance for general-purpose engineering agents, reviewer personas and assorted skills. Ported from github/awesome-copilot custom instructions. |
 
 ## What gets ported
 
@@ -86,9 +86,9 @@ Upstream's `plugins/`, `skills/`, `agents/` and everything else are untouched �
 
 ### Not ported, and why
 
-- **`instructions/`** — 192 `*.instructions.md` files scoped by `applyTo:` globs. Claude Code has no glob-scoped context primitive; converting them to skills or `CLAUDE.md` is a lossy judgment call, deferred.
+- **`instructions/`** — 193 `*.instructions.md` files scoped by `applyTo:` globs. Claude Code has no glob-scoped context primitive; converting them to skills or `CLAUDE.md` is a lossy judgment call, deferred.
 - **`hooks/`, `workflows/`** — Copilot's event model and GitHub Actions agentic workflows, different runtime.
-- **Unbundled skills** — upstream ships 416 skills and 222 agents, but only 608 skills belong to a curated plugin. Only the bundled ones are here.
+- **Unbundled skills** — upstream ships 416 skills and 222 agents, but only 609 skills belong to a curated plugin. Only the bundled ones are here.
 
 ## Staying in sync with upstream
 
@@ -108,4 +108,4 @@ git config merge.ours.driver true    # .gitattributes already maps README.md to 
 
 Everything under `claude-plugins/` and `.claude-plugin/` is generated — edit `sync.mjs`, not the output. The script self-checks the result and exits non-zero on any structural problem.
 
-Built from upstream content at commit `6a8fa297b0fe`.
+Built from upstream content at commit `17cd9ee68d49`.

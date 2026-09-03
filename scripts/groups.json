@@ -702,6 +702,7 @@
     "debian-linux-instructions": "linux-systems",
     "declarative-agents-microsoft365-instructions": "ai-agents",
     "devbox-image-definition-instructions": "content-media",
+    "devcontainers-instructions": "coding-agents",
     "devops-core-principles-instructions": "devops-ci",
     "dotnet-architecture-good-practices-instructions": "dotnet",
     "dotnet-framework-instructions": "dotnet",
