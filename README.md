@@ -15,7 +15,7 @@ Upstream's `plugins/`, `skills/`, `agents/` and everything else are untouched �
 
 ## Plugins
 
-49 plugins — 609 skills, 222 agents.
+49 plugins — 611 skills, 222 agents.
 
 | Plugin | Contents | Description |
 | --- | --- | --- |
@@ -39,9 +39,9 @@ Upstream's `plugins/`, `skills/`, `agents/` and everything else are untouched �
 | [`extras-content-media`](claude-plugins/extras-content-media/) | 25 skills, 2 agents | Document conversion, image generation and writing-style tools. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
 | [`extras-research-analysis`](claude-plugins/extras-research-analysis/) | 7 skills, 4 agents | Research, competitive analysis and reporting. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
 | [`extras-ai-agents`](claude-plugins/extras-ai-agents/) | 37 skills, 15 agents | Building agents: MCP servers, prompt engineering, evals and observability. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
-| [`extras-docs-writing`](claude-plugins/extras-docs-writing/) | 21 skills, 8 agents | Documentation, specifications and diagrams. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
+| [`extras-docs-writing`](claude-plugins/extras-docs-writing/) | 22 skills, 8 agents | Documentation, specifications and diagrams. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
 | [`extras-project-planning`](claude-plugins/extras-project-planning/) | 18 skills, 7 agents | Requirements, planning, breakdowns and retrospectives. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
-| [`extras-testing`](claude-plugins/extras-testing/) | 7 skills, 7 agents | Test authoring, migration and coverage. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
+| [`extras-testing`](claude-plugins/extras-testing/) | 8 skills, 7 agents | Test authoring, migration and coverage. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
 | [`extras-gtm-business`](claude-plugins/extras-gtm-business/) | 11 skills | Go-to-market, positioning, pricing and launch playbooks. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
 | [`extras-git-workflow`](claude-plugins/extras-git-workflow/) | 11 skills, 3 agents | Commits, branches, code review and refactoring workflows. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
 | [`extras-coding-agents`](claude-plugins/extras-coding-agents/) | 43 skills, 47 agents | General-purpose engineering agents, reviewer personas and assorted skills. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
@@ -88,7 +88,7 @@ Upstream's `plugins/`, `skills/`, `agents/` and everything else are untouched �
 
 - **`instructions/`** — 193 `*.instructions.md` files scoped by `applyTo:` globs. Claude Code has no glob-scoped context primitive; converting them to skills or `CLAUDE.md` is a lossy judgment call, deferred.
 - **`hooks/`, `workflows/`** — Copilot's event model and GitHub Actions agentic workflows, different runtime.
-- **Unbundled skills** — upstream ships 416 skills and 222 agents, but only 609 skills belong to a curated plugin. Only the bundled ones are here.
+- **Unbundled skills** — upstream ships 418 skills and 222 agents, but only 611 skills belong to a curated plugin. Only the bundled ones are here.
 
 ## Staying in sync with upstream
 
@@ -108,4 +108,4 @@ git config merge.ours.driver true    # .gitattributes already maps README.md to 
 
 Everything under `claude-plugins/` and `.claude-plugin/` is generated — edit `sync.mjs`, not the output. The script self-checks the result and exits non-zero on any structural problem.
 
-Built from upstream content at commit `7b1ebe633339`.
+Built from upstream content at commit `c2e1edf8c90b`.
