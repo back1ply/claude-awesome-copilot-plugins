@@ -724,6 +724,7 @@
     "hooks-instructions": "coding-agents",
     "html-css-style-color-guide-instructions": "web-frontend",
     "instructions-instructions": "coding-agents",
+    "intellij-java-kotlin-instructions": "java-jvm",
     "java-11-to-java-17-upgrade-instructions": "java-jvm",
     "java-17-to-java-21-upgrade-instructions": "java-jvm",
     "java-21-to-java-25-upgrade-instructions": "java-jvm",

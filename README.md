@@ -15,7 +15,7 @@ Upstream's `plugins/`, `skills/`, `agents/` and everything else are untouched �
 
 ## Plugins
 
-49 plugins — 611 skills, 222 agents.
+49 plugins — 612 skills, 222 agents.
 
 | Plugin | Contents | Description |
 | --- | --- | --- |
@@ -51,7 +51,7 @@ Upstream's `plugins/`, `skills/`, `agents/` and everything else are untouched �
 | [`instructions-azure`](claude-plugins/instructions-azure/) | 13 skills | Coding conventions and best-practice guidance for azure architecture, IaC, diagnostics and platform services. Ported from github/awesome-copilot custom instructions. |
 | [`instructions-aws`](claude-plugins/instructions-aws/) | 1 skill | Coding conventions and best-practice guidance for aWS architecture, cost and diagnostics. Ported from github/awesome-copilot custom instructions. |
 | [`instructions-dotnet`](claude-plugins/instructions-dotnet/) | 17 skills | Coding conventions and best-practice guidance for .NET, C# and Windows desktop development. Ported from github/awesome-copilot custom instructions. |
-| [`instructions-java-jvm`](claude-plugins/instructions-java-jvm/) | 12 skills | Coding conventions and best-practice guidance for java, Kotlin and Spring development. Ported from github/awesome-copilot custom instructions. |
+| [`instructions-java-jvm`](claude-plugins/instructions-java-jvm/) | 13 skills | Coding conventions and best-practice guidance for java, Kotlin and Spring development. Ported from github/awesome-copilot custom instructions. |
 | [`instructions-python`](claude-plugins/instructions-python/) | 4 skills | Coding conventions and best-practice guidance for python development, packaging and tooling. Ported from github/awesome-copilot custom instructions. |
 | [`instructions-web-frontend`](claude-plugins/instructions-web-frontend/) | 14 skills | Coding conventions and best-practice guidance for frontend frameworks, UI design, accessibility and CMS platforms. Ported from github/awesome-copilot custom instructions. |
 | [`instructions-data-sql`](claude-plugins/instructions-data-sql/) | 4 skills | Coding conventions and best-practice guidance for sQL, NoSQL, vector databases and data modelling. Ported from github/awesome-copilot custom instructions. |
@@ -86,9 +86,9 @@ Upstream's `plugins/`, `skills/`, `agents/` and everything else are untouched �
 
 ### Not ported, and why
 
-- **`instructions/`** — 193 `*.instructions.md` files scoped by `applyTo:` globs. Claude Code has no glob-scoped context primitive; converting them to skills or `CLAUDE.md` is a lossy judgment call, deferred.
+- **`instructions/`** — 194 `*.instructions.md` files scoped by `applyTo:` globs. Claude Code has no glob-scoped context primitive; converting them to skills or `CLAUDE.md` is a lossy judgment call, deferred.
 - **`hooks/`, `workflows/`** — Copilot's event model and GitHub Actions agentic workflows, different runtime.
-- **Unbundled skills** — upstream ships 418 skills and 222 agents, but only 611 skills belong to a curated plugin. Only the bundled ones are here.
+- **Unbundled skills** — upstream ships 418 skills and 222 agents, but only 612 skills belong to a curated plugin. Only the bundled ones are here.
 
 ## Staying in sync with upstream
 
@@ -108,4 +108,4 @@ git config merge.ours.driver true    # .gitattributes already maps README.md to 
 
 Everything under `claude-plugins/` and `.claude-plugin/` is generated — edit `sync.mjs`, not the output. The script self-checks the result and exits non-zero on any structural problem.
 
-Built from upstream content at commit `9ce814859eaa`.
+Built from upstream content at commit `8c657190cc43`.
