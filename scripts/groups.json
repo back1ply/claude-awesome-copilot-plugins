@@ -558,6 +558,7 @@
     "sponsor-finder": "research-analysis",
     "spring-boot-testing": "java-jvm",
     "sql-code-review": "data-sql",
+    "sql-object-impact-analysis": "data-sql",
     "sql-optimization": "data-sql",
     "sql-server-table-reconciliation": "data-sql",
     "ssma-console": "data-sql",
