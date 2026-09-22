@@ -30,6 +30,7 @@
     "amplitude-experiment-implementation": "coding-agents",
     "anti-ui-slop": "web-frontend",
     "api-architect": "coding-agents",
+    "api-breaking-change-detector": "coding-agents",
     "apify-integration-expert": "ai-agents",
     "appinsights-instrumentation": "azure",
     "apple-appstore-reviewer": "gtm-business",
