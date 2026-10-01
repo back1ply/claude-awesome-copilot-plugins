@@ -619,6 +619,27 @@
     }
   },
   {
+    "name": "dependabot-triage",
+    "description": "Triage Dependabot alerts and recommend safe, evidence-based dependency updates.",
+    "version": "1.0.0",
+    "author": {
+      "name": "Aaron Powell"
+    },
+    "repository": "https://github.com/aaronpowell/github-copilot-dependabot-canvas",
+    "license": "MIT",
+    "keywords": [
+      "dependabot",
+      "dependencies",
+      "security",
+      "canvas"
+    ],
+    "source": {
+      "source": "github",
+      "repo": "aaronpowell/github-copilot-dependabot-canvas",
+      "sha": "206c4682b6f383f631b35b9a51408fb46789eac1"
+    }
+  },
+  {
     "name": "dotnet",
     "description": "Common everyday C#/.NET coding skills. Expected to be useful to all .NET developers.",
     "version": "0.1.0",
@@ -1759,7 +1780,7 @@
   {
     "name": "winappcli",
     "description": "Windows app development, packaging, and distribution. Helps with creating Windows installers (MSIX), code signing, certificates, Windows SDK and Windows App SDK setup, package identity for Windows APIs (push notifications, background tasks, share target), appxmanifest authoring, and Microsoft Store distribution. Supports Electron, .NET, C++, Rust, Flutter, and Tauri apps.",
-    "version": "0.3.1",
+    "version": "0.7.1",
     "author": {
       "name": "Microsoft",
       "url": "https://github.com/microsoft/WinAppCli"
@@ -1782,13 +1803,14 @@
     "source": {
       "source": "github",
       "repo": "microsoft/WinAppCli",
-      "ref": "stable"
+      "path": "plugins/winapp",
+      "sha": "7c4e67e320c82600e9fb7d8786ea3a9927039b72"
     }
   },
   {
     "name": "winui",
     "description": "Agents and skills for WinUI 3 app development. Create new WinUI 3 desktop apps, convert from other frameworks (WPF, WinForms, Electron, Tauri, Flutter) to WinUI 3, or add features to existing WinUI 3 applications. Includes MSIX packaging, code signing, UI automation testing, and Windows App SDK guidance.",
-    "version": "0.6.0",
+    "version": "0.7.1",
     "author": {
       "name": "Microsoft",
       "url": "https://www.microsoft.com"
@@ -1812,8 +1834,8 @@
       "source": "github",
       "repo": "microsoft/win-dev-skills",
       "path": "plugins/winui/agent-plugin",
-      "ref": "v0.6.0",
-      "sha": "68ae65d5c65ee87c3265a7f5abe3aaf97c7e6932"
+      "ref": "v0.7.1",
+      "sha": "2e8c902e9ba675e4c57550e066fc7e48b64c49b0"
     }
   }
 ]
