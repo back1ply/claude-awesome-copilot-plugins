@@ -581,6 +581,12 @@
       "version": "1.0.2"
     },
     {
+      "name": "chronicle-stats",
+      "source": "plugins/chronicle-stats",
+      "description": "See your local Copilot token usage by day, model, and session, and get tips to use it more efficiently.",
+      "version": "1.0.0"
+    },
+    {
       "name": "clojure-interactive-programming",
       "source": "plugins/clojure-interactive-programming",
       "description": "Tools for REPL-first Clojure workflows featuring Clojure instructions, the interactive programming chat mode and supporting guidance.",
@@ -1769,6 +1775,12 @@
       "version": "1.0.0"
     },
     {
+      "name": "pr-review",
+      "source": "plugins/pr-review",
+      "description": "Review GitHub pull requests in a read-only canvas with AI-grouped changes, expandable diffs, and questions scoped to groups, files, or hunks.",
+      "version": "1.0.0"
+    },
+    {
       "name": "project-documenter",
       "source": "plugins/project-documenter",
       "description": "Generate professional project documentation with draw.io architecture diagrams and Word (.docx) output with embedded images. Automatically discovers any project's technology stack and produces Markdown, diagrams, PNG exports, and a formatted Word document.",
@@ -1783,8 +1795,8 @@
     {
       "name": "python-mcp-development",
       "source": "plugins/python-mcp-development",
-      "description": "Complete toolkit for building Model Context Protocol (MCP) servers in Python using the official SDK with FastMCP. Includes instructions for best practices, a prompt for generating servers, and an expert chat mode for guidance.",
-      "version": "1.0.0"
+      "description": "Build Model Context Protocol (MCP) servers in Python with the official MCP Python SDK v2 (MCPServer). Includes a skill that generates a server project and an expert agent for guidance.",
+      "version": "2.0.0"
     },
     {
       "name": "radius",
@@ -1861,11 +1873,11 @@
     {
       "name": "remotion",
       "description": "Make videos agentically.",
-      "version": "4.0.519",
+      "version": "4.0.534",
       "author": {
         "name": "Jonny Burger"
       },
-      "repository": "https://github.com/remotion-dev/agent-plugin",
+      "repository": "https://github.com/remotion-dev/cursor-plugin",
       "homepage": "https://remotion.dev/plugins",
       "license": "Remotion License",
       "keywords": [
@@ -1874,8 +1886,8 @@
       ],
       "source": {
         "source": "github",
-        "repo": "remotion-dev/agent-plugin",
-        "sha": "ef892905120340970357997f20bcb8ce9bb341da"
+        "repo": "remotion-dev/cursor-plugin",
+        "sha": "5cbbd94b74dd950aefb1505ec4a37b793a4b8778"
       }
     },
     {
