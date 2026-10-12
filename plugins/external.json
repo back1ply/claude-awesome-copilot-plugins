@@ -477,7 +477,7 @@
   {
     "name": "cockroachdb",
     "description": "Connect GitHub Copilot to your CockroachDB clusters: run and explore SQL through MCP, with DBA/Developer/Operator agents, CockroachDB best-practice skills, and safety hooks that block destructive statements.",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "author": {
       "name": "Cockroach Labs",
       "url": "https://github.com/cockroachdb"
@@ -496,8 +496,8 @@
     "source": {
       "source": "github",
       "repo": "cockroachdb/copilot-plugin",
-      "ref": "v0.1.4",
-      "sha": "0874b16210768d54b273c1395d9715bc8638b347"
+      "ref": "v0.1.5",
+      "sha": "010e81c747916fbec875d211b4dca6e1c1caeb46"
     }
   },
   {
@@ -895,8 +895,8 @@
   },
   {
     "name": "gh-skills-builder",
-    "description": "Repo: https://github.com/arilivigni/gh-skills-builder\nThis plugin is for people that want to create a GitHub Skills exercise which are self-paced learning GitHub within GitHub.\nhttps://learn.github.com/skills\nexamples:\nhttps://github.com/skills/agent-orchestration-build-your-ai-dream-team\nhttps://github.com/skills/agentic-workflows-that-read-the-room",
-    "version": "1.1.0",
+    "description": "Design, build, review, and publish GitHub Skills-style exercises with one coordinating agent and five Agent Skills for learner journeys, workflow-backed validation, and release readiness.",
+    "version": "2.0.0",
     "author": {
       "name": "Ari LiVigni",
       "url": "https://github.com/arilivigni"
@@ -904,10 +904,9 @@
     "repository": "https://github.com/arilivigni/gh-skills-builder",
     "license": "MIT",
     "keywords": [
-      "github-learn",
       "github-skills",
-      "github-skills-exercises",
       "education",
+      "curriculum",
       "exercise-creation",
       "agent-skills",
       "custom-agents"
@@ -915,8 +914,8 @@
     "source": {
       "source": "github",
       "repo": "arilivigni/gh-skills-builder",
-      "ref": "v1.1.0",
-      "sha": "ea22105c191554d4eeaeb05952e071526b93d73f"
+      "ref": "v2.0.0",
+      "sha": "3f5fa04c24853f12606cbb57f4bf150edad52633"
     }
   },
   {
@@ -1006,7 +1005,7 @@
   {
     "name": "keep-the-why",
     "description": "Preserves or recovers the reasoning behind a codebase — architectural decisions, rejected alternatives, workarounds, incident learnings, operational constraints, and historical context the code itself cannot explain.",
-    "version": "0.20.0",
+    "version": "0.20.1",
     "author": {
       "name": "Oliver Zehentleitner",
       "url": "https://github.com/oliver-zehentleitner"
@@ -1025,13 +1024,13 @@
     "source": {
       "source": "github",
       "repo": "oliver-zehentleitner/keep-the-why",
-      "ref": "v0.20.0"
+      "ref": "v0.20.1"
     }
   },
   {
     "name": "markdstage",
     "description": "Create, edit, present, and export Markdown slides in a GitHub Copilot Canvas.",
-    "version": "4.5.1",
+    "version": "4.6.3",
     "author": {
       "name": "Kazuki Ota",
       "url": "https://github.com/runceel"
@@ -1049,14 +1048,14 @@
       "source": "github",
       "repo": "runceel/MarkdStage",
       "path": ".github/plugin/markdstage",
-      "ref": "v4.5.1",
-      "sha": "5dc37ba46d1e61422d2764e7ae89e0a2975f19fa"
+      "ref": "v4.6.3",
+      "sha": "2ee5fa20ce228a4f6aa9b105afe83ab6d2061730"
     }
   },
   {
     "name": "microsoft-docs",
     "description": "Access official Microsoft documentation, API references, and code samples for Azure, .NET, Windows, and more.",
-    "version": "1.0.0",
+    "version": "0.3.1",
     "author": {
       "name": "Microsoft",
       "url": "https://www.microsoft.com"
@@ -1078,7 +1077,8 @@
     "repository": "https://github.com/MicrosoftDocs/mcp",
     "source": {
       "source": "github",
-      "repo": "MicrosoftDocs/mcp"
+      "repo": "MicrosoftDocs/mcp",
+      "sha": "f8ffde185dfd232dbf5d187c22ce299eadc3d583"
     }
   },
   {
