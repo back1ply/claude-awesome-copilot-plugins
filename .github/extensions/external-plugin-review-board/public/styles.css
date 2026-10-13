@@ -228,6 +228,13 @@ h2 {
     gap: 8px;
 }
 
+.column-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 0 12px 8px;
+}
+
 .column-name::before {
     content: "";
     width: 8px;
@@ -375,6 +382,16 @@ h2 {
     border-color: transparent;
     background: var(--red-muted);
     color: var(--red);
+}
+.pill-first-party {
+    border-color: transparent;
+    background: var(--green-muted);
+    color: var(--green);
+}
+.pill-third-party {
+    border-color: transparent;
+    background: var(--purple-muted);
+    color: var(--purple);
 }
 .pill-queued {
     border-color: transparent;

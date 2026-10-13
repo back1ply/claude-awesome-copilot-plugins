@@ -6,7 +6,7 @@
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { joinSession, createCanvas, CanvasError } from "@github/copilot-sdk/extension";
-import { BoardStore, RECOMMENDATIONS } from "./lib/state.mjs";
+import { BoardStore, isReadyForApproval, RECOMMENDATIONS } from "./lib/state.mjs";
 import * as gh from "./lib/github.mjs";
 import { buildReviewPrompt, buildRereviewPrompt, REVIEW_FIELDS_SCHEMA } from "./lib/review-prompt.mjs";
 import { startBoardServer, expectedError } from "./lib/server.mjs";
@@ -23,6 +23,7 @@ const servers = new Map();
 const detailCache = new Map();
 let refreshInFlight = null;
 let session;
+const decisionsInFlight = new Set();
 
 function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
@@ -49,7 +50,7 @@ async function refresh() {
     refreshInFlight ??= (async () => {
         try {
             await resolvePendingDecisions();
-            const issues = await gh.listReadyIssues(store.state.repo);
+            const issues = await gh.listBoardIssues(store.state.repo);
             detailCache.clear();
             return await store.syncIssues(issues);
         } finally {
@@ -69,7 +70,7 @@ async function getIssue(number, { force = false } = {}) {
 
 async function startReview({ numbers, instanceId, send }) {
     const items = store.pendingReview(numbers);
-    if (!items.length) return { queued: [], message: "Nothing to review — all items already have an AI review." };
+    if (!items.length) return { queued: [], message: "Nothing to review — no eligible unreviewed items remain." };
     const queued = items.map((item) => item.number);
     const snapshots = await store.markQueued(queued);
     const prompt = buildReviewPrompt({
@@ -96,7 +97,11 @@ const MAX_GUIDANCE_LENGTH = 4000;
 async function startRereview({ number, guidance, instanceId, send }) {
     const item = store.getItem(Number(number));
     if (item.decision) throw new Error(`#${item.number} was already actioned (${item.decision.kind}).`);
+    if (item.pendingDecision) throw new Error(`#${item.number} has a posted command awaiting workflow confirmation.`);
     if (item.reviewStatus === "queued") throw new Error(`#${item.number} is already queued for review.`);
+    if (!isReadyForApproval(item.labels ?? [])) {
+        throw new Error(`#${item.number} is pending intake or is no longer ready-for-review.`);
+    }
     const text = String(guidance ?? "").trim().slice(0, MAX_GUIDANCE_LENGTH);
     const snapshots = await store.markQueued([item.number], { rereviewGuidance: text || null });
     const prompt = buildRereviewPrompt({
@@ -128,14 +133,25 @@ function stripCommand(text, command) {
 }
 
 async function postDecision({ number, kind, comment }) {
+    if (decisionsInFlight.has(number)) throw new Error(`#${number} already has a GitHub action in progress.`);
+    decisionsInFlight.add(number);
+    try {
+        return await postDecisionCommand({ number, kind, comment });
+    } finally {
+        decisionsInFlight.delete(number);
+    }
+}
+
+async function postDecisionCommand({ number, kind, comment }) {
     if (kind !== "approve" && kind !== "reject") throw new Error(`Unknown decision "${kind}".`);
     const item = store.getItem(number);
     if (item.decision) throw new Error(`#${number} was already actioned (${item.decision.kind}).`);
+    if (item.pendingDecision) throw new Error(`#${number} already has a posted command awaiting workflow confirmation. Refresh the board.`);
 
     const status = await gh.getIssueStatus(store.state.repo, number);
     if (status.state !== "OPEN") throw new Error(`#${number} is ${status.state.toLowerCase()}. Refresh the board.`);
-    if (kind === "approve" && !status.labels.includes("ready-for-review")) {
-        throw new Error(`#${number} is no longer labelled ready-for-review, so /approve would be ignored.`);
+    if (kind === "approve" && !isReadyForApproval(status.labels)) {
+        throw new Error(`#${number} is pending intake or is no longer ready-for-review, so /approve would be ignored.`);
     }
 
     const text = stripCommand(comment, kind);
@@ -238,7 +254,7 @@ session = await joinSession({
                 },
                 {
                     name: "refresh",
-                    description: "Fetch open ready-for-review external plugin issues; adds new ones and removes closed ones.",
+                    description: "Fetch open external plugin submissions in active intake states; adds new ones and removes inactive ones.",
                     handler: wrap(() => refresh()),
                 },
                 {
