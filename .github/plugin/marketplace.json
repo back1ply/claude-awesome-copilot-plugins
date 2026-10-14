@@ -1162,7 +1162,7 @@
       "name": "gem-team",
       "source": "plugins/gem-team",
       "description": "Self-Learning Multi-agent orchestration framework for spec-driven development and automated verification. With smarter tool calling and leaner context.",
-      "version": "1.131.0"
+      "version": "1.138.0"
     },
     {
       "name": "gesture-review",
@@ -1300,8 +1300,8 @@
     {
       "name": "java-mcp-development",
       "source": "plugins/java-mcp-development",
-      "description": "Complete toolkit for building Model Context Protocol servers in Java using the official MCP Java SDK with reactive streams and Spring Boot integration.",
-      "version": "1.0.0"
+      "description": "Build Model Context Protocol (MCP) servers in Java with the official MCP Java SDK 2.x. Includes a skill that generates a server project and an expert agent for guidance.",
+      "version": "2.0.0"
     },
     {
       "name": "java-modernization-studio",
