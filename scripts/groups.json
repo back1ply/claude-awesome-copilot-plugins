@@ -89,6 +89,7 @@
     "azure-verified-modules-terraform": "azure",
     "azure-well-architected-review": "azure",
     "batch-files": "linux-systems",
+    "batch-script-progress": "coding-agents",
     "bench-read": "codebase-analysis",
     "bicep-implement": "azure",
     "bicep-plan": "azure",
