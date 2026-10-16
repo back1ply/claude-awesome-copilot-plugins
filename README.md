@@ -15,7 +15,7 @@ Upstream's `plugins/`, `skills/`, `agents/` and everything else are untouched �
 
 ## Plugins
 
-49 plugins — 624 skills, 222 agents.
+49 plugins — 627 skills, 222 agents.
 
 | Plugin | Contents | Description |
 | --- | --- | --- |
@@ -25,7 +25,7 @@ Upstream's `plugins/`, `skills/`, `agents/` and everything else are untouched �
 | [`extras-azure`](claude-plugins/extras-azure/) | 20 skills, 17 agents | Azure architecture, IaC, diagnostics and platform services. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
 | [`extras-aws`](claude-plugins/extras-aws/) | 6 skills, 6 agents | AWS architecture, cost and diagnostics. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
 | [`extras-dotnet`](claude-plugins/extras-dotnet/) | 23 skills, 8 agents | .NET, C# and Windows desktop development. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
-| [`extras-java-jvm`](claude-plugins/extras-java-jvm/) | 15 skills, 2 agents | Java, Kotlin and Spring development. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
+| [`extras-java-jvm`](claude-plugins/extras-java-jvm/) | 20 skills, 2 agents | Java, Kotlin and Spring development. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
 | [`extras-python`](claude-plugins/extras-python/) | 7 skills, 3 agents | Python development, packaging and tooling. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
 | [`extras-web-frontend`](claude-plugins/extras-web-frontend/) | 24 skills, 27 agents | Frontend frameworks, UI design, accessibility and CMS platforms. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
 | [`extras-data-sql`](claude-plugins/extras-data-sql/) | 28 skills, 8 agents | SQL, NoSQL, vector databases and data modelling. Community skills and agents from github/awesome-copilot that no upstream plugin bundles. |
@@ -51,7 +51,7 @@ Upstream's `plugins/`, `skills/`, `agents/` and everything else are untouched �
 | [`instructions-azure`](claude-plugins/instructions-azure/) | 13 skills | Coding conventions and best-practice guidance for azure architecture, IaC, diagnostics and platform services. Ported from github/awesome-copilot custom instructions. |
 | [`instructions-aws`](claude-plugins/instructions-aws/) | 1 skill | Coding conventions and best-practice guidance for aWS architecture, cost and diagnostics. Ported from github/awesome-copilot custom instructions. |
 | [`instructions-dotnet`](claude-plugins/instructions-dotnet/) | 17 skills | Coding conventions and best-practice guidance for .NET, C# and Windows desktop development. Ported from github/awesome-copilot custom instructions. |
-| [`instructions-java-jvm`](claude-plugins/instructions-java-jvm/) | 13 skills | Coding conventions and best-practice guidance for java, Kotlin and Spring development. Ported from github/awesome-copilot custom instructions. |
+| [`instructions-java-jvm`](claude-plugins/instructions-java-jvm/) | 11 skills | Coding conventions and best-practice guidance for java, Kotlin and Spring development. Ported from github/awesome-copilot custom instructions. |
 | [`instructions-python`](claude-plugins/instructions-python/) | 4 skills | Coding conventions and best-practice guidance for python development, packaging and tooling. Ported from github/awesome-copilot custom instructions. |
 | [`instructions-web-frontend`](claude-plugins/instructions-web-frontend/) | 14 skills | Coding conventions and best-practice guidance for frontend frameworks, UI design, accessibility and CMS platforms. Ported from github/awesome-copilot custom instructions. |
 | [`instructions-data-sql`](claude-plugins/instructions-data-sql/) | 4 skills | Coding conventions and best-practice guidance for sQL, NoSQL, vector databases and data modelling. Ported from github/awesome-copilot custom instructions. |
@@ -86,9 +86,9 @@ Upstream's `plugins/`, `skills/`, `agents/` and everything else are untouched �
 
 ### Not ported, and why
 
-- **`instructions/`** — 194 `*.instructions.md` files scoped by `applyTo:` globs. Claude Code has no glob-scoped context primitive; converting them to skills or `CLAUDE.md` is a lossy judgment call, deferred.
+- **`instructions/`** — 192 `*.instructions.md` files scoped by `applyTo:` globs. Claude Code has no glob-scoped context primitive; converting them to skills or `CLAUDE.md` is a lossy judgment call, deferred.
 - **`hooks/`, `workflows/`** — Copilot's event model and GitHub Actions agentic workflows, different runtime.
-- **Unbundled skills** — upstream ships 430 skills and 222 agents, but only 624 skills belong to a curated plugin. Only the bundled ones are here.
+- **Unbundled skills** — upstream ships 435 skills and 222 agents, but only 627 skills belong to a curated plugin. Only the bundled ones are here.
 
 ## Staying in sync with upstream
 
@@ -108,4 +108,4 @@ git config merge.ours.driver true    # .gitattributes already maps README.md to 
 
 Everything under `claude-plugins/` and `.claude-plugin/` is generated — edit `sync.mjs`, not the output. The script self-checks the result and exits non-zero on any structural problem.
 
-Built from upstream content at commit `d75c3f5e6fa0`.
+Built from upstream content at commit `8e4b443e47d4`.
