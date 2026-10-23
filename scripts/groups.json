@@ -403,6 +403,7 @@
     "new-relic-incident-response": "devops-ci",
     "next-intl-add-language": "web-frontend",
     "noob-mode": "copilot-github",
+    "npm-trusted-publishing": "coding-agents",
     "nuget-manager": "dotnet",
     "nuxt-expert": "web-frontend",
     "octopus-deploy-release-notes-mcp": "devops-ci",
