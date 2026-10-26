@@ -799,6 +799,33 @@
       "version": "1.0.0"
     },
     {
+      "name": "copilot-session-dj",
+      "description": "A playful, local Strudel soundtrack for the current GitHub Copilot session and its subagents. Includes an English/Japanese DJ Canvas, three synth-only presets, and silent-until-clicked playback with explicit stop controls.",
+      "version": "0.1.0",
+      "author": {
+        "name": "nomhiro",
+        "url": "https://github.com/nomhiro"
+      },
+      "repository": "https://github.com/nomhiro/copilot-session-jam",
+      "homepage": "https://github.com/nomhiro/copilot-session-jam/releases/tag/v0.1.0",
+      "license": "AGPL-3.0-or-later",
+      "keywords": [
+        "canvas",
+        "strudel",
+        "music",
+        "session",
+        "subagents",
+        "local-audio"
+      ],
+      "source": {
+        "source": "github",
+        "repo": "nomhiro/copilot-session-jam",
+        "path": "dist/copilot-session-dj",
+        "ref": "v0.1.0",
+        "sha": "fb815e24917136289c5a9152da8c81f25a7d33b6"
+      }
+    },
+    {
       "name": "crowdstrike-falcon-foundry",
       "description": "AI coding assistant skills for building CrowdStrike Falcon Foundry apps: scaffolding, deployment, and best practices for API integrations, collections, functions, UI extensions, UI pages, and workflows.",
       "version": "1.6.0",
@@ -1240,6 +1267,12 @@
       }
     },
     {
+      "name": "foundry-agentic-loop",
+      "source": "plugins/foundry-agentic-loop",
+      "description": "Build agentic solutions on Microsoft Foundry, GitHub and Azure. Prototype in an existing Foundry project, or run spec-driven development (SDD): a dynamic workflow that specifies, implements, verifies and deploys with azd behind evidence gates. Includes a canvas with a gallery of 61 industry prompt templates, a live workflow view and Foundry enablement, plus an improve mode that learns from past runs.",
+      "version": "1.0.0"
+    },
+    {
       "name": "foundry-hosted-agent-copilotkit",
       "source": "plugins/foundry-hosted-agent-copilotkit",
       "description": "Build CopilotKit + AG-UI web apps on Microsoft Foundry hosted agents (Microsoft Agent Framework): wiring, native Foundry primitives, human-in-the-loop approvals, azd deploy, and debugging — with the Microsoft Learn and Foundry MCP servers for live grounding.",
@@ -1266,7 +1299,7 @@
     {
       "name": "gh-skills-builder",
       "description": "Design, build, review, and publish GitHub Skills-style exercises with one coordinating agent and five Agent Skills for learner journeys, workflow-backed validation, and release readiness.",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "author": {
         "name": "Ari LiVigni",
         "url": "https://github.com/arilivigni"
@@ -1278,14 +1311,14 @@
         "education",
         "curriculum",
         "exercise-creation",
-        "agent-skills",
-        "custom-agents"
+        "custom-agents",
+        "agent-skills"
       ],
       "source": {
         "source": "github",
         "repo": "arilivigni/gh-skills-builder",
-        "ref": "v2.1.0",
-        "sha": "e6f38e29068aed1aa7c65df8de243804e80daa3f"
+        "ref": "v2.2.0",
+        "sha": "4faa38dd615c7a88eadfc84a96c77c4051983f2c"
       }
     },
     {
@@ -1358,6 +1391,12 @@
       "source": "plugins/github-security",
       "description": "Security extension for GitHub Copilot App with a canvas to work on GHAS findings.",
       "version": "0.2.0"
+    },
+    {
+      "name": "globestudio",
+      "source": "plugins/globestudio",
+      "description": "Make dotted world maps and animated 3D globes and put them on a website. Bundles the globestudio skill, which writes the design as one config and embeds it as an iframe, a React component or a web component, with the hosted Globestudio MCP server for presets, share links and embed code. Free, MIT, no API key.",
+      "version": "1.0.0"
     },
     {
       "name": "go-mcp-development",
@@ -1479,6 +1518,30 @@
       "version": "1.0.0"
     },
     {
+      "name": "megalinter",
+      "description": "Set up, run and fix MegaLinter on any repository: 100+ linters for 69+ languages, 23+ formats and 21+ tooling formats, from CI or locally.",
+      "version": "1.0.3",
+      "author": {
+        "name": "OX Security",
+        "url": "https://github.com/oxsecurity"
+      },
+      "repository": "https://github.com/oxsecurity/megalinter",
+      "homepage": "https://megalinter.io",
+      "license": "AGPL-3.0",
+      "keywords": [
+        "linter",
+        "code-quality",
+        "formatter",
+        "security",
+        "ci"
+      ],
+      "source": {
+        "source": "github",
+        "repo": "oxsecurity/megalinter",
+        "sha": "e96b2d606cd8b32303706e8cd8f9c3c9269eb043"
+      }
+    },
+    {
       "name": "microsoft-docs",
       "description": "Access official Microsoft documentation, API references, and code samples for Azure, .NET, Windows, and more.",
       "version": "0.3.1",
@@ -1535,7 +1598,7 @@
     {
       "name": "microsoft-foundry",
       "description": "Skills and interactive Copilot canvas for designing, configuring, testing and deploying agents to Microsoft Foundry.",
-      "version": "1.0.15",
+      "version": "1.0.16",
       "author": {
         "name": "Microsoft",
         "url": "https://www.microsoft.com"
@@ -1556,7 +1619,7 @@
         "source": "github",
         "repo": "microsoft/foundry-dev-tools",
         "path": "microsoft-foundry",
-        "sha": "d22cb69f340d44851184df5c99e53083e1fc0270"
+        "sha": "fd51b878fdfc1330fb34654acbe5390b0c873fef"
       }
     },
     {
@@ -1723,6 +1786,32 @@
       }
     },
     {
+      "name": "nitrosend",
+      "description": "Prepare and review email campaigns, automation flows, contacts and transactional messages in Nitrosend through its hosted OAuth MCP server. Includes a scoped skill for account selection, consent and live-send review.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Nitrosend",
+        "url": "https://nitrosend.com"
+      },
+      "repository": "https://github.com/nitrosend/copilot",
+      "homepage": "https://nitrosend.com",
+      "license": "MIT",
+      "keywords": [
+        "nitrosend",
+        "email-marketing",
+        "campaigns",
+        "automation",
+        "transactional-email",
+        "mcp",
+        "oauth"
+      ],
+      "source": {
+        "source": "github",
+        "repo": "nitrosend/copilot",
+        "sha": "9790c695cec6c36673927071f5913d0ae9bc0a8d"
+      }
+    },
+    {
       "name": "noob-mode",
       "source": "plugins/noob-mode",
       "description": "Plain-English translation layer for non-technical Copilot CLI users. Translates every approval prompt, error message, and technical output into clear, jargon-free English with color-coded risk indicators.",
@@ -1763,6 +1852,36 @@
       "source": "plugins/oracle-to-postgres-migration-expert",
       "description": "Expert agent for Oracle-to-PostgreSQL application migrations in .NET solutions. Performs code edits, runs commands, and invokes extension tools to migrate .NET/Oracle data access patterns to PostgreSQL.",
       "version": "1.1.3"
+    },
+    {
+      "name": "orrery",
+      "description": "Architecture and system design diagrams with official AWS, Azure, Google Cloud, Kubernetes and GitHub icons, auto-laid out by ELK and rendered from a YAML spec to SVG, PNG, editable draw.io, React TSX and a standalone HTML viewer.",
+      "version": "0.4.0",
+      "author": {
+        "name": "Sagar Gupta",
+        "url": "https://github.com/Sagargupta16"
+      },
+      "repository": "https://github.com/Sagargupta16/orrery",
+      "homepage": "https://github.com/Sagargupta16/orrery",
+      "license": "MIT",
+      "keywords": [
+        "diagram",
+        "architecture",
+        "system-design",
+        "aws",
+        "azure",
+        "gcp",
+        "kubernetes",
+        "drawio",
+        "svg",
+        "png"
+      ],
+      "source": {
+        "source": "github",
+        "repo": "Sagargupta16/orrery",
+        "ref": "v0.4.0",
+        "sha": "69942d3358d492a9b328ef35164b8f4ed41a0493"
+      }
     },
     {
       "name": "ospo-sponsorship",
@@ -2092,7 +2211,7 @@
       "name": "sentry-triage",
       "source": "plugins/sentry-triage",
       "description": "Scan live Sentry issues in a Copilot canvas, group them by urgency, and hand issues off for tracking or a fix PR.",
-      "version": "1.2.0"
+      "version": "1.3.0"
     },
     {
       "name": "signals-dashboard",
