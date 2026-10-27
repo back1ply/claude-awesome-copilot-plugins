@@ -107,6 +107,7 @@
     "bug-receipt": "coding-agents",
     "bug-reproduction-brief": "coding-agents",
     "build-evidence-map": "coding-agents",
+    "caption-qa": "coding-agents",
     "cast-imaging-impact-analysis": "coding-agents",
     "cast-imaging-software-discovery": "coding-agents",
     "cast-imaging-structural-quality-advisor": "coding-agents",
