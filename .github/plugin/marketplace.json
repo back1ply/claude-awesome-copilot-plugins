@@ -55,6 +55,35 @@
       "version": "1.0.0"
     },
     {
+      "name": "agentcouncil",
+      "description": "Multi-model council for Copilot CLI: three subagents on different model families (Anthropic, OpenAI, Google) answer independently, then build on each other or attack the leading answer before an orchestrator writes the final result from anonymized inputs.",
+      "version": "2.0.0",
+      "author": {
+        "name": "Shlomi Shaki",
+        "url": "https://github.com/Sentry01"
+      },
+      "repository": "https://github.com/Sentry01/AgentCouncil",
+      "license": "MIT",
+      "keywords": [
+        "multi-agent",
+        "multi-model",
+        "council",
+        "debate",
+        "brainstorm",
+        "stress-test",
+        "adversarial",
+        "collaborative",
+        "orchestration",
+        "second-opinion"
+      ],
+      "source": {
+        "source": "github",
+        "repo": "Sentry01/AgentCouncil",
+        "ref": "v2.0.0",
+        "sha": "abad48ddd3117056bbda12f2f7e87142d8c43369"
+      }
+    },
+    {
       "name": "ai-ready",
       "description": "Analyze any repository and generate AI-ready configuration — AGENTS.md, copilot-instructions.md, CI workflows, issue templates, and more. Mines your PR review patterns and creates files customized to your stack.",
       "version": "1.3.0",
@@ -208,6 +237,36 @@
       "source": "plugins/aws-cloud-development",
       "description": "Comprehensive AWS cloud development tools including Infrastructure as Code, serverless functions, architecture patterns, and cost optimization for building scalable cloud applications.",
       "version": "1.0.0"
+    },
+    {
+      "name": "aws-core",
+      "description": "Build, deploy, and operate applications on AWS. Skills for infrastructure as code (CDK, CloudFormation), core services (Lambda, API Gateway, Step Functions, ECS/Fargate, IAM, Amazon Bedrock), databases, observability, messaging and streaming, AWS SDKs, cost optimization, and Well-Architected reviews.",
+      "version": "1.2.0",
+      "author": {
+        "name": "Amazon Web Services",
+        "url": "https://aws.amazon.com"
+      },
+      "repository": "https://github.com/aws/agent-toolkit-for-aws",
+      "homepage": "https://aws.amazon.com/products/developer-tools/agent-toolkit-for-aws/",
+      "license": "Apache-2.0",
+      "keywords": [
+        "aws",
+        "amazon-web-services",
+        "cdk",
+        "cloudformation",
+        "serverless",
+        "lambda",
+        "bedrock",
+        "containers",
+        "observability",
+        "cost-optimization"
+      ],
+      "source": {
+        "source": "github",
+        "repo": "aws/agent-toolkit-for-aws",
+        "path": "plugins/aws-core",
+        "sha": "e8c630949189f03b3dd77388c86b06a7f2f911a9"
+      }
     },
     {
       "name": "azure",
@@ -826,6 +885,32 @@
       }
     },
     {
+      "name": "crowdstrike-charlotte-ai-agentworks",
+      "description": "CrowdStrike Charlotte AI AgentWorks skills for creating, managing, and invoking AI agents via external Falcon API Gateway endpoints. Includes agent lifecycle management, invocation, knowledge base operations, and discovery of models/tools/templates.",
+      "version": "1.0.1",
+      "author": {
+        "name": "CrowdStrike",
+        "url": "https://www.crowdstrike.com/"
+      },
+      "repository": "https://github.com/CrowdStrike/agentworks-skills",
+      "license": "MIT",
+      "keywords": [
+        "crowdstrike",
+        "agentworks",
+        "charlotte",
+        "agentic-studio",
+        "ai-agents",
+        "knowledge-base",
+        "falcon"
+      ],
+      "source": {
+        "source": "github",
+        "repo": "CrowdStrike/agentworks-skills",
+        "ref": "v1.0.1",
+        "sha": "924f943f3bd4c71ab6dcd650debbf0425046f941"
+      }
+    },
+    {
       "name": "crowdstrike-falcon-foundry",
       "description": "AI coding assistant skills for building CrowdStrike Falcon Foundry apps: scaffolding, deployment, and best practices for API integrations, collections, functions, UI extensions, UI pages, and workflows.",
       "version": "1.6.0",
@@ -1389,8 +1474,8 @@
     {
       "name": "github-security",
       "source": "plugins/github-security",
-      "description": "GitHub Security canvas for Copilot. Review your session's changes for vulnerabilities and fix code scanning alerts.",
-      "version": "0.2.1"
+      "description": "Review your session's changes for vulnerabilities and fix code scanning alerts",
+      "version": "0.2.2"
     },
     {
       "name": "globestudio",
@@ -1447,6 +1532,29 @@
       "source": "plugins/java-modernization-studio",
       "description": "Drive the GitHub Copilot App Modernization for Java workflow from an interactive canvas: environment readiness, repo assessment, prioritized plan and progress, validation gates, and one-click predefined-task runs grounded in the repo's real artifacts.",
       "version": "1.0.2"
+    },
+    {
+      "name": "jira-workbench",
+      "description": "A Copilot app canvas that shows any Jira project's full hierarchy (epics, issues and subtasks) and traces each item to its Copilot sessions and GitHub pull requests. The canvas only reads Jira; it can start a scoped Copilot session from any issue.",
+      "version": "2.1.3",
+      "author": {
+        "name": "Sentry01",
+        "url": "https://github.com/Sentry01"
+      },
+      "repository": "https://github.com/Sentry01/jira-workbench",
+      "license": "MIT",
+      "keywords": [
+        "jira",
+        "canvas",
+        "traceability",
+        "copilot"
+      ],
+      "source": {
+        "source": "github",
+        "repo": "Sentry01/jira-workbench",
+        "ref": "v2.1.3",
+        "sha": "0df605810d767e80edc674d9a16ab08b59d00020"
+      }
     },
     {
       "name": "jupyter-notebooks",
@@ -1942,6 +2050,31 @@
       }
     },
     {
+      "name": "pmx-canvas",
+      "description": "PMX Canvas is a collaborative canvas where you and your AI agent collect evidence, analyze findings, and develop ideas together. Pin material as context for your agent, then ask it to add findings, comparisons, or diagrams to the board for you to review, present, and build on.",
+      "version": "0.11.0",
+      "author": {
+        "name": "pskoett",
+        "url": "https://github.com/pskoett"
+      },
+      "repository": "https://github.com/pskoett/pmx-canvas",
+      "homepage": "https://github.com/pskoett/pmx-canvas#readme",
+      "license": "MIT",
+      "keywords": [
+        "canvas",
+        "mcp",
+        "spatial",
+        "copilot-canvas"
+      ],
+      "source": {
+        "source": "github",
+        "repo": "pskoett/pmx-canvas",
+        "path": "plugins/pmx-canvas",
+        "ref": "v0.11.0",
+        "sha": "6e4a4eec8102ac220913dfe6ff4ddf5dddcd387f"
+      }
+    },
+    {
       "name": "postgres-skills",
       "description": "Expert PostgreSQL guidance and live database tools for Postgres anywhere, including local, self-hosted, containers, on-premises, AWS, Google Cloud, Azure Database for PostgreSQL, and Azure HorizonDB. Covers indexing, vector search and RAG, JSONB, partitioning, security, replication, and knowledge graphs with connection-aware guidance.",
       "version": "0.1.2",
@@ -2265,7 +2398,7 @@
     {
       "name": "sonarqube",
       "description": "SonarQube is the AI code quality and security verification platform used by millions of developers to catch bugs, vulnerabilities, and leaked secrets. This plugin enforces those standards in the coding loop: 7,500+ distinct issue types, secrets scanning, agentic analysis, and quality gates across 40+ languages.",
-      "version": "2.6.0",
+      "version": "2.7.0",
       "author": {
         "name": "Sonar",
         "url": "https://sonarsource.com/"
@@ -2283,7 +2416,7 @@
       "source": {
         "source": "github",
         "repo": "SonarSource/sonarqube-agent-plugins",
-        "ref": "2.6.0"
+        "ref": "2.7.0"
       }
     },
     {
@@ -2307,6 +2440,33 @@
         "source": "github",
         "repo": "spacefast/plugins",
         "sha": "d2cfc0fe9b450de785826bc25a216440ac61081b"
+      }
+    },
+    {
+      "name": "statuslines",
+      "description": "A checkout-aware session dashboard for Copilot CLI: group pull requests and linked issues by branch/worktree, show local changes and upstream/base divergence, monitor CI and reviews, and summarize subagent progress in one composable footer.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Jon Gallant",
+        "url": "https://github.com/jongio"
+      },
+      "repository": "https://github.com/jongio/skills",
+      "homepage": "https://jongio.github.io/skills/statuslines/",
+      "license": "MIT",
+      "keywords": [
+        "copilot",
+        "copilot-cli",
+        "statusline",
+        "pr-statusline",
+        "issue-statusline",
+        "subagent-statusline",
+        "worktree-statusline"
+      ],
+      "source": {
+        "source": "github",
+        "repo": "jongio/skills",
+        "path": "extensions",
+        "sha": "83e185a6b7f62881e407b55f760610c2480bae8d"
       }
     },
     {
@@ -2590,7 +2750,7 @@
     {
       "name": "upgrade-agent",
       "description": "AI-powered upgrade assistant for upgrading and migrating applications. Helps modernize legacy code and upgrade .NET applications to current frameworks.",
-      "version": "1.1.718",
+      "version": "1.1.757",
       "author": {
         "name": "Microsoft",
         "url": "https://www.microsoft.com"
@@ -2609,8 +2769,8 @@
         "source": "github",
         "repo": "microsoft/upgrade-agent-plugins",
         "path": "plugins/upgrade-agent",
-        "ref": "v1.1.718",
-        "sha": "2faeb986eae87a9261584642b5b169b008aa8fc8"
+        "ref": "v1.1.757",
+        "sha": "a19991e3e03a0aeac0513dc31ecf1e49580f29ac"
       }
     },
     {
