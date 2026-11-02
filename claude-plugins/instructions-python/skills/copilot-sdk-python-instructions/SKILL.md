@@ -1,7 +1,9 @@
 ---
 name: copilot-sdk-python-instructions
-description: "This file provides guidance on building Python applications using GitHub Copilot SDK. Applies to: **.py, pyproject.toml, setup.py"
+description: "This file provides guidance on building Python applications using the Microsoft Copilot SDK. Applies to: **.py, pyproject.toml, setup.py"
 ---
+
+The Microsoft Copilot SDK is transitioning from the GitHub Copilot SDK in phases. No immediate changes are required; package names and examples below use the currently published identifiers. See the [official transition announcement](https://github.blog/changelog/2026-10-28-github-copilot-sdk-is-becoming-microsoft-copilot-sdk/).
 
 ## Core Principles
 
