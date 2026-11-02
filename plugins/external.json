@@ -272,6 +272,33 @@
     }
   },
   {
+    "name": "azure-functions",
+    "description": "Create, edit, modernize, review, run, deploy, and monitor Azure Function Apps in a Copilot canvas, with optional AI help. Includes official function templates, runtime and configuration checks, and companion skills.",
+    "version": "0.1.1",
+    "author": {
+      "name": "Microsoft",
+      "url": "https://github.com/microsoft"
+    },
+    "repository": "https://github.com/microsoft/azure-dev-tools",
+    "homepage": "https://github.com/microsoft/azure-dev-tools/tree/azure-functions-v0-1-1-9a5ab5e/canvases/azure-functions",
+    "license": "MIT",
+    "keywords": [
+      "canvas",
+      "azure",
+      "azure-functions",
+      "serverless",
+      "development",
+      "modernization"
+    ],
+    "source": {
+      "source": "github",
+      "repo": "microsoft/azure-dev-tools",
+      "path": "canvases/azure-functions",
+      "ref": "azure-functions-v0-1-1-9a5ab5e",
+      "sha": "9718865ce93334acfc18b60111a6c0f68078c672"
+    }
+  },
+  {
     "name": "azure-functions-hosted-skills",
     "description": "Build, run, and debug Azure Functions Hosted Skills locally or invoke supported functions in an existing Function App from a Copilot canvas.",
     "version": "0.5.5",
@@ -809,7 +836,7 @@
   {
     "name": "crowdstrike-falcon-foundry",
     "description": "AI coding assistant skills for building CrowdStrike Falcon Foundry apps: scaffolding, deployment, and best practices for API integrations, collections, functions, UI extensions, UI pages, and workflows.",
-    "version": "1.6.0",
+    "version": "1.7.0",
     "author": {
       "name": "CrowdStrike",
       "url": "https://www.crowdstrike.com/"
@@ -826,14 +853,14 @@
     "source": {
       "source": "github",
       "repo": "CrowdStrike/foundry-skills",
-      "ref": "v1.6.0",
-      "sha": "61572f38592d47c747e2595182459781bf0bc679"
+      "ref": "v1.7.0",
+      "sha": "024c8b03f0e26b70c21cac492ca9cc7e4be7a564"
     }
   },
   {
     "name": "crowdstrike-falcon-fusion",
     "description": "AI coding assistant skills for building CrowdStrike Falcon Fusion workflows: action discovery, YAML authoring, deployment, execution monitoring, and best practices for triggers, conditions, loops, and HTTP Actions.",
-    "version": "1.3.0",
+    "version": "1.4.0",
     "author": {
       "name": "CrowdStrike",
       "url": "https://www.crowdstrike.com"
@@ -850,8 +877,8 @@
     "source": {
       "source": "github",
       "repo": "CrowdStrike/fusion-skills",
-      "ref": "v1.3.0",
-      "sha": "38527dc5afa970543859c31ca5dbf69352bfaa28"
+      "ref": "v1.4.0",
+      "sha": "d4e2abf93b1f0900fcc67fe040e98d086fa1fb0c"
     }
   },
   {
@@ -1154,7 +1181,7 @@
   {
     "name": "gh-skills-builder",
     "description": "Design, build, review, and publish GitHub Skills-style exercises with one coordinating agent and five Agent Skills for learner journeys, workflow-backed validation, and release readiness.",
-    "version": "2.2.0",
+    "version": "3.0.1",
     "author": {
       "name": "Ari LiVigni",
       "url": "https://github.com/arilivigni"
@@ -1172,8 +1199,8 @@
     "source": {
       "source": "github",
       "repo": "arilivigni/gh-skills-builder",
-      "ref": "v2.2.0",
-      "sha": "4faa38dd615c7a88eadfc84a96c77c4051983f2c"
+      "ref": "v3.0.1",
+      "sha": "ee198d0a6d45ccb760e87eeea167681b113f8611"
     }
   },
   {
@@ -1678,7 +1705,7 @@
   {
     "name": "pmx-canvas",
     "description": "PMX Canvas is a collaborative canvas where you and your AI agent collect evidence, analyze findings, and develop ideas together. Pin material as context for your agent, then ask it to add findings, comparisons, or diagrams to the board for you to review, present, and build on.",
-    "version": "0.11.0",
+    "version": "0.12.0",
     "author": {
       "name": "pskoett",
       "url": "https://github.com/pskoett"
@@ -1696,8 +1723,8 @@
       "source": "github",
       "repo": "pskoett/pmx-canvas",
       "path": "plugins/pmx-canvas",
-      "ref": "v0.11.0",
-      "sha": "6e4a4eec8102ac220913dfe6ff4ddf5dddcd387f"
+      "ref": "v0.12.0",
+      "sha": "facd794de99b239ae89bf08efafeef2a45714762"
     }
   },
   {
@@ -1730,7 +1757,7 @@
   {
     "name": "radius",
     "description": "Model, visualize, and deploy applications with Radius from the GitHub Copilot app and CLI.",
-    "version": "0.2.3",
+    "version": "0.4.0",
     "author": {
       "name": "Radius",
       "url": "https://radapp.io"
@@ -1751,8 +1778,8 @@
       "source": "github",
       "repo": "radius-project/ai-extensions",
       "path": "plugins/radius",
-      "ref": "radius@0.2.3",
-      "sha": "bd392726c4ffc028eb8d95f99930c24ed6f908f9"
+      "ref": "radius@0.4.0",
+      "sha": "1247f1347d2141ebe46d18bcb9ec139a90857b76"
     }
   },
   {
@@ -1829,7 +1856,7 @@
   {
     "name": "sap-ux-fiori-tools",
     "description": "MCP server and skills for SAP Fiori development. Helps AI coding assistants build, modify, and test SAP Fiori Elements applications connected to CAP or ABAP OData services. Provides 7 skills covering app generation, analytical charts, visual filters, OPA5 testing, ESLint, tree tables, and the Fiori tools CLI.",
-    "version": "1.16.0",
+    "version": "1.16.7",
     "author": {
       "name": "SAP SE",
       "url": "https://www.sap.com"
@@ -1849,7 +1876,7 @@
       "source": "github",
       "repo": "SAP/open-ux-tools",
       "path": "plugins-coding-agents/fiori",
-      "sha": "0410fa113d720274cc2ca2ae89499d853a4046c3"
+      "sha": "653ac13f5eec09dca862dae200e349e7cc7288c9"
     }
   },
   {
@@ -1922,6 +1949,28 @@
       "source": "github",
       "repo": "spacefast/plugins",
       "sha": "d2cfc0fe9b450de785826bc25a216440ac61081b"
+    }
+  },
+  {
+    "name": "stacked-prs",
+    "description": "Split an existing large branch into smaller stacked PRs on GitHub, Azure DevOps or GitLab, and manage the branches as PRs are merged.",
+    "version": "1.0.0",
+    "author": {
+      "name": "Baron Khan"
+    },
+    "repository": "https://github.com/BaronKhan/stacked-prs",
+    "license": "MIT",
+    "keywords": [
+      "stacked-prs",
+      "code-review",
+      "github",
+      "azure-devops",
+      "gitlab"
+    ],
+    "source": {
+      "source": "github",
+      "repo": "BaronKhan/stacked-prs",
+      "sha": "dd43e89c42f69a79dc08d2350770fbe345fb804a"
     }
   },
   {
