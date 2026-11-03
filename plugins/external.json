@@ -221,7 +221,7 @@
   {
     "name": "azure",
     "description": "Microsoft Azure MCP and Skills integration for cloud resource management, deployments, and Azure services. Manage your Azure infrastructure, monitor applications, and deploy resources directly from your development environment.",
-    "version": "1.2.108",
+    "version": "1.2.110",
     "author": {
       "name": "Microsoft",
       "url": "https://www.microsoft.com"
@@ -243,7 +243,7 @@
       "source": "github",
       "repo": "microsoft/azure-skills",
       "path": ".github/plugins/azure-skills",
-      "sha": "39b8cb013c5d0886e8819e7147f1eec1eebc0cd6"
+      "sha": "bd001a39dc9d4fea4f4e488284a9cfbb05d4bf78"
     }
   },
   {
@@ -1443,7 +1443,7 @@
   {
     "name": "microsoft-foundry",
     "description": "Skills and interactive Copilot canvas for designing, configuring, testing and deploying agents to Microsoft Foundry.",
-    "version": "1.0.17",
+    "version": "1.0.18",
     "author": {
       "name": "Microsoft",
       "url": "https://www.microsoft.com"
@@ -1464,7 +1464,7 @@
       "source": "github",
       "repo": "microsoft/foundry-dev-tools",
       "path": "microsoft-foundry",
-      "sha": "c47adf137bc54d1814630f1454e3055d92834381"
+      "sha": "9d17511b8bbe1cf7071f52c579280925f69fd044"
     }
   },
   {
@@ -2243,7 +2243,7 @@
   {
     "name": "upgrade-agent",
     "description": "AI-powered upgrade assistant for upgrading and migrating applications. Helps modernize legacy code and upgrade .NET applications to current frameworks.",
-    "version": "1.1.757",
+    "version": "1.1.777",
     "author": {
       "name": "Microsoft",
       "url": "https://www.microsoft.com"
@@ -2262,8 +2262,8 @@
       "source": "github",
       "repo": "microsoft/upgrade-agent-plugins",
       "path": "plugins/upgrade-agent",
-      "ref": "v1.1.757",
-      "sha": "a19991e3e03a0aeac0513dc31ecf1e49580f29ac"
+      "ref": "v1.1.777",
+      "sha": "a45a385f7b89d603942e4c9ea6750083de1c1763"
     }
   },
   {
@@ -2440,7 +2440,7 @@
   {
     "name": "wiqd",
     "description": "Developer toolkit for building, validating, provisioning, and publishing Microsoft 365 Copilot plugins, including extensibility capabilities such as declarative agents, skills, and connectors, using the wiqd CLI.",
-    "version": "0.18.0",
+    "version": "0.22.0",
     "author": {
       "name": "Microsoft",
       "url": "https://www.microsoft.com"
@@ -2462,7 +2462,7 @@
       "source": "github",
       "repo": "microsoft/wiqd",
       "path": "plugins/wiqd",
-      "sha": "a37995e479cd038523145772198ee3b870cd3f8c"
+      "sha": "882c8ef358161bdf589171919f9378a8129bde61"
     }
   }
 ]
