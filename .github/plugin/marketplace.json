@@ -48,6 +48,12 @@
       "version": "1.0.0"
     },
     {
+      "name": "adobe-illustrator",
+      "source": "plugins/adobe-illustrator",
+      "description": "Adobe Illustrator scripting, extension and plug-in development, MCP and command-line automation, and Creative Cloud asset management, led by an expert technical artist agent for Adobe Creative Cloud.",
+      "version": "1.0.0"
+    },
+    {
       "name": "agent-council",
       "description": "A runtime-portable 5-agent quality gate that adjudicates text artifacts before they ship. Five role-conditioned LLM deliberators run a 2-round async protocol with cross-read rebuttal and return one verdict — SHIP, REVISE, or HOLD — plus a structured revision brief and a full audit transcript.",
       "version": "0.1.3",
@@ -1706,6 +1712,36 @@
         "path": ".github/plugin/markdstage",
         "ref": "v4.6.3",
         "sha": "2ee5fa20ce228a4f6aa9b105afe83ab6d2061730"
+      }
+    },
+    {
+      "name": "mastercard-developers",
+      "description": "Mastercard Developers plugin to help build integrations with Mastercard APIs, including best practices and the Mastercard Developers MCP server.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Mastercard",
+        "url": "https://developer.mastercard.com"
+      },
+      "repository": "https://github.com/Mastercard/developers-agent-toolkit",
+      "homepage": "https://developer.mastercard.com",
+      "license": "MIT",
+      "keywords": [
+        "mastercard",
+        "mastercard-developers",
+        "payments",
+        "api",
+        "open-finance",
+        "open-banking",
+        "integration",
+        "mcp",
+        "modelcontextprotocol",
+        "agent-toolkit"
+      ],
+      "source": {
+        "source": "github",
+        "repo": "Mastercard/developers-agent-toolkit",
+        "path": "providers/agent-plugins/plugin",
+        "sha": "2c6781ce476a222faf93862a735ced7777aa02ae"
       }
     },
     {
