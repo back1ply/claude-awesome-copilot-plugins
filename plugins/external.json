@@ -82,6 +82,30 @@
     }
   },
   {
+    "name": "agentvfx",
+    "description": "Music-reactive VFX clips directed by an agent: 42 templates, 231 presets, 12 palettes and 945 knobs (68,326,335 combinations), rendered locally with WebGL2.",
+    "version": "0.3.5",
+    "author": {
+      "name": "wjgoarxiv",
+      "url": "https://github.com/wjgoarxiv"
+    },
+    "repository": "https://github.com/wjgoarxiv/agentvfx",
+    "homepage": "https://agentvfx.vercel.app",
+    "license": "Apache-2.0",
+    "keywords": [
+      "vfx",
+      "music-visualizer",
+      "webgl",
+      "motion-graphics",
+      "agent-skill"
+    ],
+    "source": {
+      "source": "github",
+      "repo": "wjgoarxiv/agentvfx",
+      "sha": "61bfe4f5d74c0ae53b1af7eafb7c3407e845da08"
+    }
+  },
+  {
     "name": "ai-ready",
     "description": "Analyze any repository and generate AI-ready configuration — AGENTS.md, copilot-instructions.md, CI workflows, issue templates, and more. Mines your PR review patterns and creates files customized to your stack.",
     "version": "1.3.0",
@@ -221,7 +245,7 @@
   {
     "name": "azure",
     "description": "Microsoft Azure MCP and Skills integration for cloud resource management, deployments, and Azure services. Manage your Azure infrastructure, monitor applications, and deploy resources directly from your development environment.",
-    "version": "1.2.115",
+    "version": "1.2.122",
     "author": {
       "name": "Microsoft",
       "url": "https://www.microsoft.com"
@@ -243,7 +267,7 @@
       "source": "github",
       "repo": "microsoft/azure-skills",
       "path": ".github/plugins/azure-skills",
-      "sha": "299b16bf063bdf37c783e08bcae27ca57fface38"
+      "sha": "9aa7f618563713f47481af67b7b9dcaafdc2154a"
     }
   },
   {
@@ -301,7 +325,7 @@
   {
     "name": "azure-functions-hosted-skills",
     "description": "Build, run, and debug Azure Functions Hosted Skills locally or invoke supported functions in an existing Function App from a Copilot canvas.",
-    "version": "0.5.5",
+    "version": "0.5.6",
     "author": {
       "name": "paulyuk",
       "url": "https://learn.microsoft.com/en-us/azure/azure-functions/functions-hosted-skills"
@@ -322,7 +346,7 @@
       "source": "github",
       "repo": "microsoft/azure-dev-tools",
       "path": "canvases/azure-functions-hosted-skills",
-      "sha": "bf0bd07520d004845b727bb40932c24a6e69bb8d"
+      "sha": "3060c6e53a5480843c34ae2270524cd9c74f4bdc"
     }
   },
   {
@@ -836,7 +860,7 @@
   {
     "name": "crowdstrike-falcon-foundry",
     "description": "AI coding assistant skills for building CrowdStrike Falcon Foundry apps: scaffolding, deployment, and best practices for API integrations, collections, functions, UI extensions, UI pages, and workflows.",
-    "version": "1.7.0",
+    "version": "1.7.1",
     "author": {
       "name": "CrowdStrike",
       "url": "https://www.crowdstrike.com/"
@@ -853,8 +877,8 @@
     "source": {
       "source": "github",
       "repo": "CrowdStrike/foundry-skills",
-      "ref": "v1.7.0",
-      "sha": "024c8b03f0e26b70c21cac492ca9cc7e4be7a564"
+      "ref": "v1.7.1",
+      "sha": "90082f829c6c2c4192b1459a01488863a1e82d1e"
     }
   },
   {
@@ -2344,8 +2368,8 @@
   },
   {
     "name": "typescript",
-    "description": "Skills from the TypeScript team for coding agents working with TypeScript, JavaScript, and Node.js. Covers complex TypeScript tasks like upgrades, project setup, strictness, ESM migration, declaration publishing, builds, project validation, and dependency security.",
-    "version": "0.1.0",
+    "description": "Skills from the TypeScript team for coding agents working with TypeScript, JavaScript, and Node.js, including project setup, strictness, build references, declaration publishing, and TypeScript upgrades.",
+    "version": "0.2.0",
     "author": {
       "name": "Nathan Shively-Sanders, Ryan Cavanaugh, Emily Fischer"
     },
@@ -2361,7 +2385,7 @@
       "source": "github",
       "repo": "microsoft/typescript-skills",
       "path": "plugins/typescript",
-      "sha": "2480764651ce9afbb7b29c56bb58e9a16b80e7b9"
+      "sha": "d017fda5c841b85a76a96be4265ef24c1aaaaaf3"
     }
   },
   {
@@ -2697,6 +2721,36 @@
       "repo": "microsoft/wiqd",
       "path": "plugins/wiqd",
       "sha": "925de866de27950ad2e0d66ebab694c192b27ce1"
+    }
+  },
+  {
+    "name": "wraith",
+    "description": "Skills and agents for data and infrastructure engineering on GCP: dbt on BigQuery, ODCS data contracts, Cloud Run and Terraform. Reviews data and infrastructure plans before anyone builds them and writes schema-valid data contracts.",
+    "version": "0.8.3",
+    "author": {
+      "name": "wraith-proxy",
+      "url": "https://github.com/wraith-proxy"
+    },
+    "repository": "https://github.com/wraith-proxy/wraith-skills",
+    "license": "MIT",
+    "keywords": [
+      "data-engineering",
+      "gcp",
+      "bigquery",
+      "dbt",
+      "cloud-run",
+      "terraform",
+      "odcs",
+      "data-contracts",
+      "ontology",
+      "agents"
+    ],
+    "source": {
+      "source": "github",
+      "repo": "wraith-proxy/wraith-skills",
+      "path": "plugin",
+      "ref": "v0.8.3",
+      "sha": "d7e2c3caa203731e030ec63fe273638b9fd92c59"
     }
   }
 ]
