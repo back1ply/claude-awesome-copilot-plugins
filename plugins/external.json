@@ -299,6 +299,31 @@
     }
   },
   {
+    "name": "azure-advisor",
+    "description": "Azure Advisor recommendations, service-retirement impact, and customer-ready remediation guidance.",
+    "version": "1.0.13",
+    "author": {
+      "name": "Microsoft",
+      "url": "https://www.microsoft.com"
+    },
+    "repository": "https://github.com/microsoft/azure-skills",
+    "homepage": "https://github.com/microsoft/github-copilot-for-azure",
+    "license": "MIT",
+    "keywords": [
+      "azure",
+      "cloud",
+      "advisor",
+      "recommendations",
+      "remediation"
+    ],
+    "source": {
+      "source": "github",
+      "repo": "microsoft/azure-skills",
+      "path": ".github/plugins/azure-advisor",
+      "sha": "233c51fc11c73d459be46e099e417ebaf3d20a26"
+    }
+  },
+  {
     "name": "azure-cost-health-check",
     "description": "Read-only Azure cost, forecasts, budget alerts, Advisor recommendations, and AI billing analysis in a Copilot canvas.",
     "version": "0.4.5",
@@ -2016,7 +2041,7 @@
   {
     "name": "postgres-skills",
     "description": "Expert PostgreSQL guidance and live database tools for Postgres anywhere, including local, self-hosted, containers, on-premises, AWS, Google Cloud, Azure Database for PostgreSQL, and Azure HorizonDB. Covers indexing, vector search and RAG, JSONB, partitioning, security, replication, and knowledge graphs with connection-aware guidance.",
-    "version": "0.1.2",
+    "version": "0.3.0",
     "author": {
       "name": "Microsoft",
       "url": "https://github.com/microsoft"
@@ -2037,7 +2062,7 @@
       "source": "github",
       "repo": "microsoft/postgres-skills",
       "path": "plugin",
-      "sha": "3ea7816fd1e449916b9277cc2671bc1c4c34f8c9"
+      "sha": "b7908c0b53b2a292fb8286d4d4bdba7ea4690291"
     }
   },
   {
@@ -2142,7 +2167,7 @@
   {
     "name": "sap-ux-fiori-tools",
     "description": "MCP server and skills for SAP Fiori development. Helps AI coding assistants build, modify, and test SAP Fiori Elements applications connected to CAP or ABAP OData services. Provides 7 skills covering app generation, analytical charts, visual filters, OPA5 testing, ESLint, tree tables, and the Fiori tools CLI.",
-    "version": "1.16.15",
+    "version": "1.16.16",
     "author": {
       "name": "SAP SE",
       "url": "https://www.sap.com"
@@ -2162,7 +2187,7 @@
       "source": "github",
       "repo": "SAP/open-ux-tools",
       "path": "plugins-coding-agents/fiori",
-      "sha": "b612ca507fedfedc37c846c7da7276e52a9a6db2"
+      "sha": "1ea709d809c75c480d2d9fbcd7f02a185a7df1cd"
     }
   },
   {
@@ -2240,7 +2265,7 @@
   {
     "name": "speckit-companion",
     "description": "A live board of every spec in your repo, next to the chat: each spec's specify → plan → tasks → implement pipeline, its documents, task progress and run history, and a button that runs the next step. Works with stock Spec Kit and with SpecKit Companion.",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "author": {
       "name": "Alfredo Perez",
       "url": "https://github.com/alfredoperez"
@@ -2260,8 +2285,8 @@
       "source": "github",
       "repo": "alfredoperez/speckit-companion",
       "path": "apps/copilot-canvas",
-      "ref": "canvas-v0.2.1",
-      "sha": "f9b73db59cd9187dca39530e5e0e6119aff577b4"
+      "ref": "canvas-v0.2.2",
+      "sha": "2a62503a0138d09d88cba86519674922dea64113"
     }
   },
   {
@@ -2582,7 +2607,7 @@
   {
     "name": "upgrade-agent",
     "description": "AI-powered upgrade assistant for upgrading and migrating applications. Helps modernize legacy code and upgrade .NET applications to current frameworks.",
-    "version": "1.1.784",
+    "version": "1.1.816",
     "author": {
       "name": "Microsoft",
       "url": "https://www.microsoft.com"
@@ -2601,8 +2626,8 @@
       "source": "github",
       "repo": "microsoft/upgrade-agent-plugins",
       "path": "plugins/upgrade-agent",
-      "ref": "v1.1.784",
-      "sha": "cede9dcfbc09a06f0e63652e64fc7545ce5fe1df"
+      "ref": "v1.1.816",
+      "sha": "66e4df70157385f4d8cfa1c5e1d6dd7361958059"
     }
   },
   {
