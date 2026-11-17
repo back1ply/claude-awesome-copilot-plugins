@@ -361,7 +361,7 @@
     {
       "name": "azure",
       "description": "Microsoft Azure MCP and Skills integration for cloud resource management, deployments, and Azure services. Manage your Azure infrastructure, monitor applications, and deploy resources directly from your development environment.",
-      "version": "1.2.122",
+      "version": "1.2.125",
       "author": {
         "name": "Microsoft",
         "url": "https://www.microsoft.com"
@@ -383,7 +383,7 @@
         "source": "github",
         "repo": "microsoft/azure-skills",
         "path": ".github/plugins/azure-skills",
-        "sha": "9aa7f618563713f47481af67b7b9dcaafdc2154a"
+        "sha": "81dd499c31fb26dc002c0829796ddaba5a7e5dbc"
       }
     },
     {
@@ -418,6 +418,34 @@
       "version": "1.0.1"
     },
     {
+      "name": "azure-cost",
+      "description": "Azure cost analysis, estimation, optimization, and governance workflows backed by Azure Resource Manager MCP.",
+      "version": "1.0.22",
+      "author": {
+        "name": "Microsoft",
+        "url": "https://www.microsoft.com"
+      },
+      "repository": "https://github.com/microsoft/azure-skills",
+      "homepage": "https://github.com/microsoft/github-copilot-for-azure",
+      "license": "MIT",
+      "keywords": [
+        "azure",
+        "cost-management",
+        "analysis",
+        "estimation",
+        "optimization",
+        "budgets",
+        "governance",
+        "commitments"
+      ],
+      "source": {
+        "source": "github",
+        "repo": "microsoft/azure-skills",
+        "path": ".github/plugins/azure-cost",
+        "sha": "233c51fc11c73d459be46e099e417ebaf3d20a26"
+      }
+    },
+    {
       "name": "azure-cost-health-check",
       "description": "Read-only Azure cost, forecasts, budget alerts, Advisor recommendations, and AI billing analysis in a Copilot canvas.",
       "version": "0.4.5",
@@ -445,13 +473,13 @@
     {
       "name": "azure-functions",
       "description": "Create, edit, modernize, review, run, deploy, and monitor Azure Function Apps in a Copilot canvas, with optional AI help. Includes official function templates, runtime and configuration checks, and companion skills.",
-      "version": "0.1.5",
+      "version": "0.1.6",
       "author": {
         "name": "Microsoft",
         "url": "https://github.com/microsoft"
       },
       "repository": "https://github.com/microsoft/azure-dev-tools",
-      "homepage": "https://github.com/microsoft/azure-dev-tools/tree/azure-functions-v0-1-5-b90cf9e/canvases/azure-functions",
+      "homepage": "https://github.com/microsoft/azure-dev-tools/tree/azure-functions-v0-1-6-14b147b/canvases/azure-functions",
       "license": "MIT",
       "keywords": [
         "canvas",
@@ -465,8 +493,8 @@
         "source": "github",
         "repo": "microsoft/azure-dev-tools",
         "path": "canvases/azure-functions",
-        "ref": "azure-functions-v0-1-5-b90cf9e",
-        "sha": "0b249720ebd45df6e03584c7d12d7b62eb4e50ba"
+        "ref": "azure-functions-v0-1-6-14b147b",
+        "sha": "036ddd2db79f080294b8a7d8fd5ef2f0ecaaab8f"
       }
     },
     {
@@ -1884,6 +1912,34 @@
       "version": "1.0.0"
     },
     {
+      "name": "kody",
+      "description": "Your agents' cloud for individuals and teams. Search, execute, packages, jobs, credentials, and durable memory through MCP.",
+      "version": "1.0.7",
+      "author": {
+        "name": "Kody",
+        "url": "https://github.com/kody-hq"
+      },
+      "repository": "https://github.com/kody-hq/kody",
+      "homepage": "https://kody.codes",
+      "license": "FSL-1.1-ALv2",
+      "keywords": [
+        "mcp",
+        "agent-cloud",
+        "memory",
+        "credentials",
+        "code-execution",
+        "automation",
+        "packages",
+        "jobs",
+        "teams"
+      ],
+      "source": {
+        "source": "github",
+        "repo": "kody-hq/kody",
+        "sha": "e2f42402b5d60ab1e4f7b0f93c21cf05a6db54d1"
+      }
+    },
+    {
       "name": "kotlin-mcp-development",
       "source": "plugins/kotlin-mcp-development",
       "description": "Complete toolkit for building Model Context Protocol (MCP) servers in Kotlin using the official io.modelcontextprotocol:kotlin-sdk library. Includes instructions for best practices, a prompt for generating servers, and an expert chat mode for guidance.",
@@ -2060,7 +2116,7 @@
     {
       "name": "microsoft-foundry",
       "description": "Skills and interactive Copilot canvas for designing, configuring, testing and deploying agents to Microsoft Foundry.",
-      "version": "1.0.19",
+      "version": "1.0.20",
       "author": {
         "name": "Microsoft",
         "url": "https://www.microsoft.com"
@@ -2081,7 +2137,7 @@
         "source": "github",
         "repo": "microsoft/foundry-dev-tools",
         "path": "microsoft-foundry",
-        "sha": "bba484bffc275cc9640f61b7b7357be0f943e16b"
+        "sha": "3ee0c83a69f05e5e39a8ca47b28cde86edede85c"
       }
     },
     {
@@ -2741,7 +2797,7 @@
     {
       "name": "sap-ux-fiori-tools",
       "description": "MCP server and skills for SAP Fiori development. Helps AI coding assistants build, modify, and test SAP Fiori Elements applications connected to CAP or ABAP OData services. Provides 7 skills covering app generation, analytical charts, visual filters, OPA5 testing, ESLint, tree tables, and the Fiori tools CLI.",
-      "version": "1.16.16",
+      "version": "1.17.0",
       "author": {
         "name": "SAP SE",
         "url": "https://www.sap.com"
@@ -2761,7 +2817,7 @@
         "source": "github",
         "repo": "SAP/open-ux-tools",
         "path": "plugins-coding-agents/fiori",
-        "sha": "1ea709d809c75c480d2d9fbcd7f02a185a7df1cd"
+        "sha": "0b3a88c4d388b7f665b997320ab350f2d71f6808"
       }
     },
     {
@@ -3493,7 +3549,7 @@
     {
       "name": "wiqd",
       "description": "Developer toolkit for building, validating, provisioning, and publishing Microsoft 365 Copilot plugins, including extensibility capabilities such as declarative agents, skills, and connectors, using the wiqd CLI.",
-      "version": "0.24.0",
+      "version": "1.0.0",
       "author": {
         "name": "Microsoft",
         "url": "https://www.microsoft.com"
@@ -3515,7 +3571,7 @@
         "source": "github",
         "repo": "microsoft/wiqd",
         "path": "plugins/wiqd",
-        "sha": "47f230e3943f8948d78d8b17817c8f41f0783627"
+        "sha": "58e98d4a2a883c8a4b36614432a7dac3714da176"
       }
     },
     {
