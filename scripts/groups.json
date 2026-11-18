@@ -454,6 +454,7 @@
     "playwright-generate-test": "testing",
     "playwright-tester": "testing",
     "poka-yoke": "coding-agents",
+    "polytype-middleware": "coding-agents",
     "ponder": "coding-agents",
     "postgresql-code-review": "data-sql",
     "postgresql-dba": "data-sql",
